@@ -1,7 +1,12 @@
 self.__BUILD_MANIFEST = {
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/empireo-preview//_next/:path+",
+        "destination": "/empireo-preview/_next/:path+"
+      }
+    ],
     "fallback": []
   },
   "sortedPages": [
