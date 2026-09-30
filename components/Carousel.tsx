@@ -2,7 +2,13 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-const images = ["/photo.jpg", "/photo2.jpg", "/photo.jpg"];
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+const images = [
+  `${basePath}/photo.jpg`,
+  `${basePath}/photo2.jpg`,
+  `${basePath}/photo.jpg`,
+];
 
 export default function Carousel() {
   const [current, setCurrent] = useState(0);
