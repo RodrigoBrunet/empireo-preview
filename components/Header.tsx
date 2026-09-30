@@ -12,7 +12,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/logo.png`} // ou logo.png se converter
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/logo.jpg`} // ou logo.png se converter
             alt="Logo Empireo Engenharia & Segurança"
             width={140}
             height={60}
