@@ -1,9 +1,17 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+const repo = "empireo-preview";
+
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/empireo-preview", // nome do repositório no GitHub
-  assetPrefix: "/empireo-preview/",
+  basePath: isProd ? `/${repo}` : "",
+  assetPrefix: isProd ? `/${repo}/` : "",
+  images: { unoptimized: true },
+  trailingSlash: true,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isProd ? `/${repo}` : "",
+  },
 };
 
 export default nextConfig;
