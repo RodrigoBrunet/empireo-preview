@@ -3,12 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import logo from "@/public/logo.jpg";
+// Versão do logo sem as margens brancas do arquivo original (public/logo.jpg)
+import logo from "@/public/logo-header.jpg";
 
 const links = [
   { href: "/", label: "Inicio" },
   { href: "/#sobre", label: "Sobre nós" },
-  { href: "/services", label: "Serviços" },
+  { href: "/#servicos", label: "Serviços" },
   { href: "/contact", label: "Contato" },
 ];
 

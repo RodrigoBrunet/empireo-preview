@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import obra from "@/public/trabalho.jpg";
+// Foto gratuita do Pexels (licença livre para uso comercial): pexels.com/photo/2760241
+import obra from "@/public/engenharia-industrial.jpg";
 
 const destaques: { valor: string; texto?: string }[] = [
   { valor: "25+", texto: "anos de experiência" },
@@ -16,7 +17,7 @@ export default function Hero() {
     <section className="max-w-7xl mx-auto px-4 md:px-6 pt-6 md:pt-8">
       <div className="grid gap-3 lg:grid-cols-5">
         {/* Card azul */}
-        <div className="relative overflow-hidden flex flex-col justify-between bg-[#0046A6] text-white rounded-3xl lg:rounded-br-none p-8 md:p-12 lg:col-span-3 motion-safe:animate-fade-up motion-safe:[animation-delay:150ms]">
+        <div className="relative overflow-hidden flex flex-col justify-between bg-[#0046A6] text-white rounded-3xl lg:rounded-br-none p-6 sm:p-8 md:p-12 lg:col-span-3 motion-safe:animate-fade-up motion-safe:[animation-delay:150ms]">
           {/* Grade de planta técnica, sumindo da direita para a esquerda */}
           <div
             aria-hidden="true"
@@ -37,7 +38,7 @@ export default function Hero() {
               </span>
             </div>
 
-            <h1 className="font-display font-bold uppercase text-3xl sm:text-4xl xl:text-5xl leading-tight mt-5">
+            <h1 className="font-display font-bold uppercase text-2xl sm:text-3xl md:text-4xl xl:text-5xl leading-tight mt-5">
               Transformando desafios em soluções
             </h1>
 
@@ -49,7 +50,7 @@ export default function Hero() {
                 Fale Conosco
               </Link>
               <Link
-                href="/services"
+                href="/#servicos"
                 className="border-2 border-white/70 text-white font-bold px-6 py-3 rounded-md transition duration-200 hover:bg-white/10 hover:border-white hover:scale-105"
               >
                 Nossos serviços
@@ -76,10 +77,10 @@ export default function Hero() {
         <div className="relative overflow-hidden rounded-3xl lg:rounded-bl-none aspect-4/3 lg:aspect-auto lg:col-span-2 motion-safe:animate-fade-up motion-safe:[animation-delay:300ms]">
           <Image
             src={obra}
-            alt="Casa de máquinas com tubulações, válvulas e manômetros"
+            alt="Profissional com capacete e colete de segurança inspecionando um rotor de turbina industrial"
             fill
             sizes="(min-width: 1024px) 40vw, 100vw"
-            className="object-cover"
+            className="object-cover object-[30%_50%]"
             priority
             placeholder="blur"
           />

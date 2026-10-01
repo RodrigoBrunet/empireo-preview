@@ -7,7 +7,7 @@ export default function Apresentacao() {
       id="sobre"
       className="max-w-7xl mx-auto px-4 md:px-6 py-10 md:py-14 scroll-mt-26 md:scroll-mt-34"
     >
-      <div className="relative overflow-hidden bg-white rounded-3xl shadow-sm p-8 md:p-14">
+      <div className="relative overflow-hidden bg-white rounded-3xl shadow-sm p-6 sm:p-8 md:p-14">
         {/* Faixa dourada no topo, como a linha do logo */}
         <span className="absolute inset-x-0 top-0 h-1.5 bg-linear-to-r from-[#B8862F] via-[#E9C46A] to-[#B8862F]" />
 

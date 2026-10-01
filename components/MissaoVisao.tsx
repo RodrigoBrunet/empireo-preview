@@ -1,50 +1,90 @@
-// Cards de Missão e Visão, em variações da paleta do logo:
-// azul-marinho (mais escuro que o azul do hero) e dourado em degradê.
+import type { ComponentType } from "react";
+
+type Card = {
+  rotulo: string;
+  titulo: string;
+  texto: string;
+  Icone: ComponentType<{ className?: string }>;
+  estilo: {
+    card: string;
+    brilho: string; // mancha de luz desfocada no canto
+    etiqueta: string;
+    marcaDagua: string; // ícone grande e transparente ao fundo
+    texto: string;
+  };
+};
+
+// Cards de Missão e Foco nas cores da paleta (marinho e dourado), com visual
+// mais leve: título sem serifa, rótulo em etiqueta, brilho e ícone de fundo.
+const cards: Card[] = [
+  {
+    rotulo: "Nossa missão",
+    titulo: "Crescer junto com nossos parceiros",
+    texto:
+      "Entregar trabalhos de excelência com competência, honestidade e integridade. Queremos crescer junto com os nossos parceiros. Somos uma empresa ambiciosa à procura de desafios para serem superados.",
+    Icone: IconeAlvo,
+    estilo: {
+      card: "bg-[#002B6B] text-white",
+      brilho: "bg-[#0046A6]",
+      etiqueta: "bg-white/10 border-white/15 text-[#E9C46A]",
+      marcaDagua: "text-white/[0.06]",
+      texto: "text-white/80",
+    },
+  },
+  {
+    rotulo: "Nosso foco",
+    titulo: "Excelência com ética e compromisso",
+    texto:
+      "Entregar resultados de excelência com ética, competência e integridade. Queremos parceiros através de um trabalho de excelência e compromissado com as suas necessidades.",
+    Icone: IconeOlho,
+    estilo: {
+      card: "bg-linear-to-br from-[#C89B3C] via-[#E9C46A] to-[#C89B3C] text-[#002B6B]",
+      brilho: "bg-white/60",
+      etiqueta: "bg-white/40 border-[#002B6B]/15 text-[#002B6B]",
+      marcaDagua: "text-[#002B6B]/[0.08]",
+      texto: "text-[#002B6B]/85",
+    },
+  },
+];
+
 export default function MissaoVisao() {
   return (
     <section className="max-w-7xl mx-auto px-4 md:px-6 pb-10 md:pb-14">
       <div className="grid gap-3 md:grid-cols-2">
-        {/* Missão — azul-marinho */}
-        <article className="relative overflow-hidden bg-[#002B6B] text-white rounded-3xl p-8 md:p-12">
-          <span
-            aria-hidden="true"
-            className="absolute -right-10 -top-10 h-40 w-40 rounded-full border-[14px] border-white/5"
-          />
-          <IconeAlvo className="relative h-12 w-12 text-[#E9C46A]" />
-          <p className="relative text-sm font-semibold tracking-[0.25em] text-[#E9C46A] mt-6">
-            NOSSA MISSÃO
-          </p>
-          <h3 className="relative font-display font-bold text-2xl md:text-3xl mt-2">
-            Crescer junto com nossos parceiros
-          </h3>
-          <span className="relative block h-0.5 w-16 bg-[#C89B3C] mt-5" />
-          <p className="relative mt-5 text-base md:text-lg leading-relaxed text-white/85 text-justify hyphens-auto">
-            Entregar trabalhos de excelência com competência, honestidade e
-            integridade. Queremos crescer junto com os nossos parceiros. Somos
-            uma empresa ambiciosa à procura de desafios para serem superados.
-          </p>
-        </article>
+        {cards.map(({ rotulo, titulo, texto, Icone, estilo }) => (
+          <article
+            key={rotulo}
+            className={`group relative overflow-hidden rounded-3xl p-6 sm:p-8 md:p-12 transition duration-300 hover:-translate-y-1 hover:shadow-xl ${estilo.card}`}
+          >
+            {/* Animações contínuas enquanto o mouse está no card: definidas como pausadas
+                (globals.css) e o hover força rodar (o ! vence o shorthand do animate-*);
+                ao sair param onde estão, sem "pular" de volta */}
+            {/* Brilho desfocado no canto, "respira" no hover */}
+            <span
+              aria-hidden="true"
+              className={`absolute -top-24 -right-24 h-64 w-64 rounded-full blur-3xl opacity-60 motion-safe:animate-respirar group-hover:[animation-play-state:running]! ${estilo.brilho}`}
+            />
+            {/* Ícone grande ao fundo, gira devagar no hover */}
+            <Icone
+              className={`absolute -bottom-10 -right-10 h-56 w-56 transition-[scale] duration-700 group-hover:scale-110 motion-safe:animate-girar-lento group-hover:[animation-play-state:running]! ${estilo.marcaDagua}`}
+            />
 
-        {/* Visão — dourado */}
-        <article className="relative overflow-hidden bg-linear-to-br from-[#C89B3C] via-[#E9C46A] to-[#C89B3C] text-[#002B6B] rounded-3xl p-8 md:p-12">
-          <span
-            aria-hidden="true"
-            className="absolute -right-10 -top-10 h-40 w-40 rounded-full border-[14px] border-white/20"
-          />
-          <IconeOlho className="relative h-12 w-12 text-[#002B6B]" />
-          <p className="relative text-sm font-semibold tracking-[0.25em] text-[#002B6B]/80 mt-6">
-            NOSSO FOCO
-          </p>
-          <h3 className="relative font-display font-bold text-2xl md:text-3xl mt-2">
-            Excelência com ética e compromisso
-          </h3>
-          <span className="relative block h-0.5 w-16 bg-[#002B6B] mt-5" />
-          <p className="relative mt-5 text-base md:text-lg leading-relaxed text-[#002B6B]/90 text-justify hyphens-auto">
-            Entregar resultados de excelência com ética, competência e
-            integridade. Queremos parceiros através de um trabalho de excelência
-            e compromissado com as suas necessidades.
-          </p>
-        </article>
+            <span
+              className={`relative inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider ${estilo.etiqueta}`}
+            >
+              <Icone className="h-4 w-4" />
+              {rotulo}
+            </span>
+            <h3 className="relative text-2xl md:text-3xl font-semibold tracking-tight mt-6">
+              {titulo}
+            </h3>
+            <p
+              className={`relative mt-4 text-base md:text-lg leading-relaxed text-justify hyphens-auto ${estilo.texto}`}
+            >
+              {texto}
+            </p>
+          </article>
+        ))}
       </div>
     </section>
   );
