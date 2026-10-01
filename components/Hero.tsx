@@ -34,7 +34,7 @@ export default function Hero() {
             <div className="flex items-center gap-3">
               <span className="h-1 w-12 rounded-full bg-linear-to-r from-[#B8862F] via-[#E9C46A] to-[#B8862F]" />
               <span className="text-xs md:text-sm font-semibold tracking-[0.25em] text-[#E9C46A]">
-                ENGENHARIA &amp; SEGURANÇA
+                ENGENHARIA &amp; SEGURANÇA DO TRABALHO
               </span>
             </div>
 
