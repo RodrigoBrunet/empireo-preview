@@ -32,11 +32,12 @@ export default function Header() {
   return (
     <header className="bg-white text-[#0046A6] shadow-md sticky top-0 w-full z-50">
       <nav
-        className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-6 py-3 md:py-1"
+        // Desktop: 3 colunas (logo | links | vazio) para os links ficarem no centro exato
+        className="max-w-7xl mx-auto flex items-center justify-between md:grid md:grid-cols-[1fr_auto_1fr] px-4 md:px-6 py-3 md:py-1"
         aria-label="Menu principal"
       >
         {/* Logo */}
-        <Link href="/" className="flex items-center" onClick={close}>
+        <Link href="/" className="flex items-center w-fit" onClick={close}>
           <Image
             src={logo}
             alt="Logo Empireo Engenharia & Segurança"
@@ -46,7 +47,7 @@ export default function Header() {
         </Link>
 
         {/* Menu Desktop */}
-        <ul className="hidden md:flex gap-8 lg:gap-16 text-sm font-semibold">
+        <ul className="hidden md:flex gap-8 lg:gap-16 text-base lg:text-lg font-semibold">
           {links.map((link) => (
             <li key={link.href}>
               <Link
@@ -59,14 +60,6 @@ export default function Header() {
             </li>
           ))}
         </ul>
-
-        {/* Botão de destaque */}
-        <Link
-          href="/contact"
-          className="hidden md:inline-block bg-[#0046A6] text-white font-bold px-4 py-2 rounded-md transition duration-200 hover:bg-[#003580] hover:scale-110"
-        >
-          Fale Conosco
-        </Link>
 
         {/* Botão hambúrguer (mobile) */}
         <button
@@ -101,7 +94,7 @@ export default function Header() {
         hidden={!open}
         className="md:hidden border-t border-gray-100 bg-white"
       >
-        <ul className="flex flex-col px-4 py-2 font-semibold">
+        <ul className="flex flex-col px-4 py-2 text-lg font-semibold">
           {links.map((link) => (
             <li key={link.href}>
               {/* active: repete o efeito do hover, já que no toque não há hover */}
@@ -118,17 +111,6 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        <div className="px-4 pb-4">
-          <Link
-            href="/contact"
-            onClick={close}
-            className="block text-center bg-[#0046A6] text-white font-bold px-4 py-3 rounded-md transition duration-200
-              hover:bg-[#003580] hover:scale-105
-              active:bg-[#003580] active:scale-105"
-          >
-            Fale Conosco
-          </Link>
-        </div>
       </div>
     </header>
   );

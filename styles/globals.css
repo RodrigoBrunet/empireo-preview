@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme inline {
+  --font-display: var(--font-cinzel), Georgia, serif;
+}
+
 /* TODO: o arquivo public/fonts/empireo.woff2 ainda não existe — até lá, cai no fallback sans-serif */
 @font-face {
   font-family: 'EmpireoFont';
