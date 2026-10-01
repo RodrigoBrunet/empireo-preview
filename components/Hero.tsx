@@ -49,12 +49,14 @@ export default function Hero() {
               >
                 Fale Conosco
               </Link>
-              <Link
-                href="/#servicos"
+              {/* <a> comum: o Hero só existe na home, então o navegador rola sozinho
+                  até #servicos (respeitando o scroll-mt), sem passar pelo router */}
+              <a
+                href="#servicos"
                 className="border-2 border-white/70 text-white font-bold px-6 py-3 rounded-md transition duration-200 hover:bg-white/10 hover:border-white hover:scale-105"
               >
                 Nossos serviços
-              </Link>
+              </a>
             </div>
           </div>
 

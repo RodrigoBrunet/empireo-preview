@@ -30,7 +30,7 @@ export default function Header() {
 
   const close = () => setOpen(false);
 
-  // "Inicio" e o logo apontam para a página atual, então o navegador não rola
+  // "Inicio" aponta para a página atual, então o navegador não rola
   // sozinho: sobe até o topo (suave pelo scroll-behavior do CSS) e tira o #sobre da URL
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     close();
@@ -48,15 +48,16 @@ export default function Header() {
         className="max-w-7xl mx-auto flex items-center justify-between md:grid md:grid-cols-[1fr_auto_1fr] px-4 md:px-6 py-3 md:py-1"
         aria-label="Menu principal"
       >
-        {/* Logo */}
-        <Link href="/" className="flex items-center w-fit" onClick={(e) => handleClick(e, "/")}>
+        {/* Logo: <a> comum (não Link) para recarregar a página inteira; o basePath
+            precisa ir na mão porque só o Link do Next o adiciona sozinho */}
+        <a href={`${process.env.NEXT_PUBLIC_BASE_PATH}/`} className="flex items-center w-fit">
           <Image
             src={logo}
             alt="Logo Empireo Engenharia & Segurança"
             className="h-20 md:h-32 w-auto"
             priority
           />
-        </Link>
+        </a>
 
         {/* Menu Desktop */}
         <ul className="hidden md:flex gap-8 lg:gap-16 text-base lg:text-lg font-semibold">
