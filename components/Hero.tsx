@@ -14,10 +14,12 @@ const destaques: { valor: string; texto?: string }[] = [
 // Lado a lado a partir de lg; os cantos de baixo virados um para o outro são retos.
 export default function Hero() {
   return (
-    <section className="max-w-7xl mx-auto px-4 md:px-6 pt-6 md:pt-8">
+    // overflow-x-clip: durante a entrada lateral os cards ficam fora da tela por um
+    // instante e não podem criar rolagem horizontal
+    <section className="max-w-7xl mx-auto px-4 md:px-6 pt-6 md:pt-8 overflow-x-clip">
       <div className="grid gap-3 lg:grid-cols-5">
         {/* Card azul */}
-        <div className="relative overflow-hidden flex flex-col justify-between bg-[#0046A6] text-white rounded-3xl lg:rounded-br-none p-6 sm:p-8 md:p-12 lg:col-span-3 motion-safe:animate-fade-up motion-safe:[animation-delay:150ms]">
+        <div className="relative overflow-hidden flex flex-col justify-between bg-[#0046A6] text-white rounded-3xl lg:rounded-br-none p-6 sm:p-8 md:p-12 lg:col-span-3 motion-safe:animate-slide-in-left motion-safe:[animation-delay:150ms]">
           {/* Grade de planta técnica, sumindo da direita para a esquerda */}
           <div
             aria-hidden="true"
@@ -76,7 +78,7 @@ export default function Hero() {
         </div>
 
         {/* Card de foto (acompanha a altura do card azul) */}
-        <div className="relative overflow-hidden rounded-3xl lg:rounded-bl-none aspect-4/3 lg:aspect-auto lg:col-span-2 motion-safe:animate-fade-up motion-safe:[animation-delay:300ms]">
+        <div className="relative overflow-hidden rounded-3xl lg:rounded-bl-none aspect-4/3 lg:aspect-auto lg:col-span-2 motion-safe:animate-slide-in-right motion-safe:[animation-delay:300ms]">
           <Image
             src={obra}
             alt="Profissional com capacete e colete de segurança inspecionando um rotor de turbina industrial"
