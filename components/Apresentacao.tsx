@@ -1,7 +1,12 @@
 // Card de apresentação da empresa, na identidade do logo (azul + dourado).
 export default function Apresentacao() {
   return (
-    <section className="max-w-7xl mx-auto px-4 md:px-6 py-10 md:py-14">
+    // id="sobre" é o destino do atalho "Sobre nós" do header; scroll-mt desconta
+    // a altura do header fixo para o card não ficar escondido atrás dele
+    <section
+      id="sobre"
+      className="max-w-7xl mx-auto px-4 md:px-6 py-10 md:py-14 scroll-mt-26 md:scroll-mt-34"
+    >
       <div className="relative overflow-hidden bg-white rounded-3xl shadow-sm p-8 md:p-14">
         {/* Faixa dourada no topo, como a linha do logo */}
         <span className="absolute inset-x-0 top-0 h-1.5 bg-linear-to-r from-[#B8862F] via-[#E9C46A] to-[#B8862F]" />
@@ -19,7 +24,7 @@ export default function Apresentacao() {
             SOBRE NÓS
           </p>
           <h2 className="font-display font-bold text-3xl md:text-4xl mt-3">
-            Prazer, somos a Empireo
+            Somos a Empireo
           </h2>
           <span className="block h-0.5 w-24 bg-[#C89B3C] mt-5" />
 

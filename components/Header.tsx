@@ -7,7 +7,7 @@ import logo from "@/public/logo.jpg";
 
 const links = [
   { href: "/", label: "Inicio" },
-  { href: "/about", label: "Sobre nós" },
+  { href: "/#sobre", label: "Sobre nós" },
   { href: "/services", label: "Serviços" },
   { href: "/contact", label: "Contato" },
 ];
@@ -29,15 +29,26 @@ export default function Header() {
 
   const close = () => setOpen(false);
 
+  // "Inicio" e o logo apontam para a página atual, então o navegador não rola
+  // sozinho: sobe até o topo (suave pelo scroll-behavior do CSS) e tira o #sobre da URL
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    close();
+    if (href === "/" && pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0 });
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+  };
+
   return (
-    <header className="bg-white text-[#0046A6] shadow-md sticky top-0 w-full z-50">
+    <header className="bg-white text-[#0046A6] shadow-md sticky top-0 w-full z-50 motion-safe:animate-header-in">
       <nav
         // Desktop: 3 colunas (logo | links | vazio) para os links ficarem no centro exato
         className="max-w-7xl mx-auto flex items-center justify-between md:grid md:grid-cols-[1fr_auto_1fr] px-4 md:px-6 py-3 md:py-1"
         aria-label="Menu principal"
       >
         {/* Logo */}
-        <Link href="/" className="flex items-center w-fit" onClick={close}>
+        <Link href="/" className="flex items-center w-fit" onClick={(e) => handleClick(e, "/")}>
           <Image
             src={logo}
             alt="Logo Empireo Engenharia & Segurança"
@@ -52,6 +63,7 @@ export default function Header() {
             <li key={link.href}>
               <Link
                 href={link.href}
+                onClick={(e) => handleClick(e, link.href)}
                 aria-current={pathname === link.href ? "page" : undefined}
                 className="inline-block transition duration-200 hover:text-[#C89B3C] hover:scale-115"
               >
@@ -100,7 +112,7 @@ export default function Header() {
               {/* active: repete o efeito do hover, já que no toque não há hover */}
               <Link
                 href={link.href}
-                onClick={close}
+                onClick={(e) => handleClick(e, link.href)}
                 aria-current={pathname === link.href ? "page" : undefined}
                 className="block py-3 origin-left transition duration-200
                   hover:text-[#C89B3C] hover:scale-115

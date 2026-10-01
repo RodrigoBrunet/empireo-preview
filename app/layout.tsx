@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-BR" className={cinzel.variable}>
+    <html lang="pt-BR" className={cinzel.variable} data-scroll-behavior="smooth">
       <body className="bg-[#F1EFEA] text-[#0046A6] font-sans">
         <Header />
         <main>{children}</main>
