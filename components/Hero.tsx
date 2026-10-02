@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 // Foto gratuita do Pexels (licença livre para uso comercial): pexels.com/photo/2760241
 import obra from "@/public/engenharia-industrial.jpg";
 
@@ -45,14 +44,14 @@ export default function Hero() {
             </h1>
 
             <div className="flex flex-wrap gap-3 mt-8">
-              <Link
-                href="/contact"
+              {/* <a> comuns: o Hero só existe na home, então o navegador rola sozinho
+                  até #contato / #servicos (respeitando o scroll-mt), sem passar pelo router */}
+              <a
+                href="#contato"
                 className="bg-white text-[#0046A6] font-bold px-6 py-3 rounded-md transition duration-200 hover:bg-[#E9C46A] hover:scale-105"
               >
                 Fale Conosco
-              </Link>
-              {/* <a> comum: o Hero só existe na home, então o navegador rola sozinho
-                  até #servicos (respeitando o scroll-mt), sem passar pelo router */}
+              </a>
               <a
                 href="#servicos"
                 className="border-2 border-white/70 text-white font-bold px-6 py-3 rounded-md transition duration-200 hover:bg-white/10 hover:border-white hover:scale-105"
@@ -62,16 +61,17 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Números em destaque */}
-          <dl className="relative grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/15">
+          {/* Números em destaque: cada item sempre em duas linhas (whitespace-nowrap).
+              O tamanho da fonte acompanha a largura do card (@container + cqi) e as
+              colunas seguem a largura do texto, para "anos de experiência" caber */}
+          <dl className="@container relative grid grid-cols-1 sm:grid-cols-[auto_auto_auto] sm:justify-between gap-6 mt-12 pt-8 border-t border-white/15">
             {destaques.map((item) => (
-              <div key={item.valor}>
-                <dt className="font-display font-bold text-2xl md:text-3xl text-[#E9C46A]">
-                  {item.valor}
-                </dt>
-                {item.texto && (
-                  <dd className="text-sm text-white/80 mt-1">{item.texto}</dd>
-                )}
+              <div
+                key={item.valor}
+                className="text-center text-[#E9C46A] font-display font-bold whitespace-nowrap leading-snug text-[clamp(1rem,calc(100cqi/12),1.5rem)] sm:text-[clamp(1rem,calc((100cqi-3rem)/25),1.875rem)]"
+              >
+                <dt>{item.valor}</dt>
+                {item.texto && <dd>{item.texto}</dd>}
               </div>
             ))}
           </dl>

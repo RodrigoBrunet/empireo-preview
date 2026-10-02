@@ -10,15 +10,15 @@ type Area = {
   itens: string[];
 };
 
-const areas: Area[] = [
+// Exportada: o formulário de Contato usa os títulos como opções de serviço
+export const areas: Area[] = [
   {
     titulo: "Treinamentos",
     tema: "azul",
     icone: <IconeCapelo />,
     itens: [
       "NR-12 — Segurança em Máquinas e Equipamentos",
-      "Inventor Professional",
-      "Inventor Nastran",
+      "Inventor Professional e Inventor Nastran",
     ],
   },
   {
@@ -91,7 +91,7 @@ export default function Servicos() {
     // id="servicos" é o destino do atalho "Serviços" do header
     <section
       id="servicos"
-      className="max-w-7xl mx-auto px-4 md:px-6 pb-10 md:pb-14 scroll-mt-26 md:scroll-mt-34"
+      className="max-w-7xl mx-auto px-4 md:px-6 pb-10 md:pb-14 scroll-mt-21 md:scroll-mt-28"
     >
       <div className="text-center max-w-2xl mx-auto mb-8 md:mb-10">
         <p className="text-sm font-semibold tracking-[0.25em] text-[#B8862F]">
@@ -129,7 +129,9 @@ function CardArea({ area }: { area: Area }) {
         aria-controls={idLista}
         className="w-full flex items-center gap-3 md:gap-5 text-left cursor-pointer"
       >
-        <span className={`shrink-0 h-9 w-9 md:h-12 md:w-12 ${t.destaque}`}>{area.icone}</span>
+        <span className={`shrink-0 h-9 w-9 md:h-12 md:w-12 ${t.destaque}`}>
+          {area.icone}
+        </span>
 
         {/* lg:min-h-[2lh]: reserva 2 linhas para os cards fechados terem a mesma altura */}
         <span className="flex-1 min-w-0 flex items-center font-display font-bold text-xl md:text-2xl leading-tight lg:min-h-[2lh]">
@@ -173,7 +175,7 @@ function CardArea({ area }: { area: Area }) {
               <div
                 key={outra.titulo}
                 aria-hidden="true"
-                className="invisible hidden lg:flex flex-wrap gap-2 col-start-1 row-start-1"
+                className="invisible hidden lg:flex flex-col items-start gap-2 col-start-1 row-start-1"
               >
                 {outra.itens.map((item, i) => (
                   <span key={item + i} className={chipBase}>
@@ -183,7 +185,8 @@ function CardArea({ area }: { area: Area }) {
               </div>
             ))}
 
-            <ul className="flex flex-wrap content-start gap-2 col-start-1 row-start-1">
+            {/* Um chip por linha (flex-col), todos os cards no mesmo padrão */}
+            <ul className="flex flex-col items-start gap-2 col-start-1 row-start-1">
               {area.itens.map((item, i) => (
                 <li
                   key={item + i}

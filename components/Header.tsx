@@ -3,14 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-// Versão do logo sem as margens brancas do arquivo original (public/logo.jpg)
-import logo from "@/public/logo-header.jpg";
+import logo from "@/public/logo.jpg";
 
 const links = [
   { href: "/", label: "Inicio" },
   { href: "/#sobre", label: "Sobre nós" },
   { href: "/#servicos", label: "Serviços" },
-  { href: "/contact", label: "Contato" },
+  { href: "/#contato", label: "Contato" },
 ];
 
 export default function Header() {
@@ -45,16 +44,18 @@ export default function Header() {
     <header className="bg-white text-[#0046A6] shadow-md sticky top-0 w-full z-50 motion-safe:animate-header-in">
       <nav
         // Desktop: 3 colunas (logo | links | vazio) para os links ficarem no centro exato
-        className="max-w-7xl mx-auto flex items-center justify-between md:grid md:grid-cols-[1fr_auto_1fr] px-4 md:px-6 py-3 md:py-1"
+        className="max-w-7xl mx-auto flex items-center justify-between md:grid md:grid-cols-[1fr_auto_1fr] px-4 md:px-6 py-3 md:py-2"
         aria-label="Menu principal"
       >
         {/* Logo: <a> comum (não Link) para recarregar a página inteira; o basePath
             precisa ir na mão porque só o Link do Next o adiciona sozinho */}
-        <a href={`${process.env.NEXT_PUBLIC_BASE_PATH}/`} className="flex items-center w-fit">
+        {/* overflow-hidden + margens negativas cortam a margem branca de cima (~10%)
+            e de baixo (~16%) do logo.jpg: o logo fica do mesmo tamanho e o header mais baixo */}
+        <a href={`${process.env.NEXT_PUBLIC_BASE_PATH}/`} className="flex items-center w-fit overflow-hidden">
           <Image
             src={logo}
             alt="Logo Empireo Engenharia & Segurança"
-            className="h-20 md:h-32 w-auto"
+            className="h-20 md:h-32 w-auto -mt-2 -mb-3 md:-mt-3 md:-mb-5"
             priority
           />
         </a>

@@ -5,7 +5,7 @@ export default function Apresentacao() {
     // a altura do header fixo para o card não ficar escondido atrás dele
     <section
       id="sobre"
-      className="max-w-7xl mx-auto px-4 md:px-6 py-10 md:py-14 scroll-mt-26 md:scroll-mt-34"
+      className="max-w-7xl mx-auto px-4 md:px-6 py-10 md:py-14 scroll-mt-21 md:scroll-mt-28"
     >
       {/* Hover: o card sobe e a sombra cresce; o "E" do fundo e a linha do título
           reagem junto (group). O movimento fica em motion-safe */}
