@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import type { Metadata } from "next";
 import { Cinzel } from "next/font/google";
 import type { ReactNode } from "react";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 // Serifada parecida com a tipografia do logo, usada nos títulos (classe font-display)
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="bg-[#F1EFEA] text-[#0046A6] font-sans">
         <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

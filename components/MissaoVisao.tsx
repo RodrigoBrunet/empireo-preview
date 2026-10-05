@@ -79,7 +79,7 @@ export default function MissaoVisao() {
               {titulo}
             </h3>
             <p
-              className={`relative mt-4 text-base md:text-lg leading-relaxed text-justify hyphens-auto ${estilo.texto}`}
+              className={`relative mt-4 text-base md:text-lg leading-relaxed lg:text-justify hyphens-auto ${estilo.texto}`}
             >
               {texto}
             </p>

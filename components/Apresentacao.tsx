@@ -31,7 +31,7 @@ export default function Apresentacao() {
           <span className="block h-0.5 w-24 bg-[#C89B3C] mt-5 transition-[width] duration-500 motion-safe:group-hover:w-40" />
 
           {/* hyphens-auto evita buracos grandes entre palavras no texto justificado (usa o lang="pt-BR") */}
-          <div className="mt-6 space-y-4 text-base md:text-lg leading-relaxed text-gray-700 text-justify hyphens-auto">
+          <div className="mt-6 space-y-4 text-base md:text-lg leading-relaxed text-gray-700 sm:text-justify hyphens-auto">
             <p>
               A Empireo é uma empresa com uma equipe de profissionais com mais
               de 25 anos de experiência na área de engenharia mecânica e

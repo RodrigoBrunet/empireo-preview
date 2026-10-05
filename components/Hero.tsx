@@ -78,7 +78,7 @@ export default function Hero() {
         </div>
 
         {/* Card de foto (acompanha a altura do card azul) */}
-        <div className="relative overflow-hidden rounded-3xl lg:rounded-bl-none aspect-4/3 lg:aspect-auto lg:col-span-2 motion-safe:animate-slide-in-right motion-safe:[animation-delay:300ms]">
+        <div className="relative overflow-hidden rounded-3xl lg:rounded-bl-none aspect-4/3 sm:aspect-video lg:aspect-auto lg:col-span-2 motion-safe:animate-slide-in-right motion-safe:[animation-delay:300ms]">
           <Image
             src={obra}
             alt="Profissional com capacete e colete de segurança inspecionando um rotor de turbina industrial"
