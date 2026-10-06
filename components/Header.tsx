@@ -85,6 +85,8 @@ export default function Header() {
           aria-controls="menu-mobile"
           onClick={() => setOpen((prev) => !prev)}
         >
+          {/* ☰ que vira ✕: as linhas de cima e de baixo descem/sobem até o centro e
+              giram 45°, a do meio some. transform-box: fill-box gira cada linha no próprio centro */}
           <svg
             className="h-7 w-7"
             viewBox="0 0 24 24"
@@ -94,38 +96,70 @@ export default function Header() {
             strokeLinecap="round"
             aria-hidden="true"
           >
-            {open ? (
-              <path d="M6 6l12 12M18 6L6 18" />
-            ) : (
-              <path d="M4 7h16M4 12h16M4 17h16" />
-            )}
+            {[7, 12, 17].map((y, i) => (
+              <path
+                key={y}
+                d={`M4 ${y}h16`}
+                className="origin-center transform-fill transition duration-300 ease-out"
+                style={{
+                  transform: open
+                    ? i === 1
+                      ? "scaleX(0)"
+                      : `translateY(${12 - y}px) rotate(${i === 0 ? 45 : -45}deg)`
+                    : "none",
+                  opacity: open && i === 1 ? 0 : 1,
+                }}
+              />
+            ))}
           </svg>
         </button>
       </nav>
 
       {/* Menu Mobile */}
+      {/* Abre deslizando: grid-rows de 0fr para 1fr anima até a altura real do menu;
+          inert tira os links do Tab e do leitor de tela enquanto está fechado.
+          absolute (flutua sob o header): abrir/fechar não empurra a página, senão o
+          clique num link rolaria para o lugar errado enquanto o menu ainda fecha */}
       <div
         id="menu-mobile"
-        hidden={!open}
-        className="md:hidden border-t border-gray-100 bg-white"
+        inert={!open}
+        className={`md:hidden absolute inset-x-0 top-full grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none ${
+          open ? "grid-rows-[1fr] shadow-md" : "grid-rows-[0fr]"
+        }`}
       >
-        <ul className="flex flex-col px-4 py-2 text-lg font-semibold">
-          {links.map((link) => (
-            <li key={link.href}>
-              {/* active: repete o efeito do hover, já que no toque não há hover */}
-              <Link
-                href={link.href}
-                onClick={(e) => handleClick(e, link.href)}
-                aria-current={pathname === link.href ? "page" : undefined}
-                className="block py-3 origin-left transition duration-200
-                  hover:text-[#C89B3C] hover:scale-115
-                  active:text-[#C89B3C] active:scale-115"
+        <div className="overflow-hidden">
+          <ul
+            className={`flex flex-col px-4 py-2 text-lg font-semibold bg-white border-t transition-colors ${
+              open ? "border-gray-100" : "border-transparent"
+            }`}
+          >
+            {links.map((link, i) => (
+              <li
+                key={link.href}
+                // Itens entram em cascata, deslizando da esquerda
+                style={{ transitionDelay: open ? `${80 + i * 50}ms` : "0ms" }}
+                className={`transition duration-300 ease-out ${
+                  open ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-3"
+                }`}
               >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+                {/* No toque não há hover: enquanto o dedo está na linha (active:), ela ganha
+                    fundo dourado claro, barrinha dourada à esquerda e o texto desliza.
+                    tap-highlight transparente tira o retângulo cinza padrão do celular */}
+                <Link
+                  href={link.href}
+                  onClick={(e) => handleClick(e, link.href)}
+                  aria-current={pathname === link.href ? "page" : undefined}
+                  className="relative block py-3 px-3 -mx-3 rounded-xl transition-all duration-150 [-webkit-tap-highlight-color:transparent]
+                    before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:h-0 before:w-1 before:rounded-full before:bg-[#C89B3C] before:transition-all before:duration-150
+                    hover:text-[#C89B3C] hover:bg-[#E9C46A]/15 hover:pl-5 hover:before:h-6
+                    active:text-[#B8862F] active:bg-[#E9C46A]/25 active:pl-5 active:before:h-6"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </header>
   );

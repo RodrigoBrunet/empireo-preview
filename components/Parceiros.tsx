@@ -54,10 +54,15 @@ export default function Parceiros() {
       {/* 9 parceiros: 3 linhas de 3 a partir do tablet; no celular, 2 por linha
           e o último ocupa a linha inteira, para não sobrar um card sozinho num canto */}
       <ul className="grid grid-cols-2 md:grid-cols-3 gap-3">
-        {parceiros.map((parceiro) => (
+        {parceiros.map((parceiro, i) => (
           <li
             key={parceiro.nome}
-            className={`group h-24 md:h-28 last:col-span-2 md:last:col-span-1 rounded-2xl ${parceiro.fundo ?? "bg-white"} shadow-sm flex items-center justify-center px-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg`}
+            // Cascata ao rolar até a seção (Revelar em page.tsx marca data-revelar):
+            // escondido enquanto "oculto", e cada logo sobe 70ms depois do anterior.
+            // active: no toque o card afunda de leve (no celular não há hover)
+            style={{ animationDelay: `${i * 70}ms` }}
+            className={`group h-24 md:h-28 last:col-span-2 md:last:col-span-1 rounded-2xl ${parceiro.fundo ?? "bg-white"} shadow-sm flex items-center justify-center px-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg active:scale-[0.97]
+              group-data-[revelar=oculto]/revelar:motion-safe:opacity-0 group-data-[revelar=visivel]/revelar:motion-safe:animate-fade-up`}
           >
             {parceiro.logo ? (
               // Limite de altura E de largura: logos largos e altos ficam com peso visual

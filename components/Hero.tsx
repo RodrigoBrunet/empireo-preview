@@ -48,13 +48,13 @@ export default function Hero() {
                   até #contato / #servicos (respeitando o scroll-mt), sem passar pelo router */}
               <a
                 href="#contato"
-                className="bg-white text-[#0046A6] font-bold px-6 py-3 rounded-md transition duration-200 hover:bg-[#E9C46A] hover:scale-105"
+                className="bg-white text-[#0046A6] font-bold px-6 py-3 rounded-md transition duration-200 hover:bg-[#E9C46A] hover:scale-105 active:scale-95"
               >
                 Fale Conosco
               </a>
               <a
                 href="#servicos"
-                className="border-2 border-white/70 text-white font-bold px-6 py-3 rounded-md transition duration-200 hover:bg-white/10 hover:border-white hover:scale-105"
+                className="border-2 border-white/70 text-white font-bold px-6 py-3 rounded-md transition duration-200 active:scale-95 hover:bg-white/10 hover:border-white hover:scale-105"
               >
                 Nossos serviços
               </a>

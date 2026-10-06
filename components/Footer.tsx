@@ -114,7 +114,7 @@ function IconeRede({ href, rotulo, children }: { href: string; rotulo: string; c
       target="_blank"
       rel="noopener noreferrer"
       aria-label={rotulo}
-      className="h-11 w-11 rounded-full border border-white/25 bg-white/10 flex items-center justify-center transition duration-200 hover:bg-[#E9C46A] hover:border-[#E9C46A] hover:text-[#002B6B] hover:-translate-y-0.5"
+      className="h-11 w-11 rounded-full border border-white/25 bg-white/10 flex items-center justify-center transition duration-200 active:scale-90 hover:bg-[#E9C46A] hover:border-[#E9C46A] hover:text-[#002B6B] hover:-translate-y-0.5"
     >
       {children}
     </a>

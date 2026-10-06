@@ -54,7 +54,7 @@ export default function MissaoVisao() {
         {cards.map(({ rotulo, titulo, texto, Icone, estilo }) => (
           <article
             key={rotulo}
-            className={`group relative overflow-hidden rounded-3xl p-6 sm:p-8 md:p-12 transition duration-300 hover:-translate-y-1 hover:shadow-xl ${estilo.card}`}
+            className={`group relative overflow-hidden rounded-3xl p-6 sm:p-8 md:p-12 transition duration-300 active:scale-[0.98] hover:-translate-y-1 hover:shadow-xl ${estilo.card}`}
           >
             {/* Animações contínuas enquanto o mouse está no card: definidas como pausadas
                 (globals.css) e o hover força rodar (o ! vence o shorthand do animate-*);

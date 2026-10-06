@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { linkWhatsApp } from "@/lib/contato";
+import Revelar from "@/components/Revelar";
 
 type Tema = "azul" | "marinho" | "dourado";
 
@@ -310,22 +311,25 @@ export default function Servicos() {
       id="servicos"
       className="max-w-7xl mx-auto px-4 md:px-6 pb-10 md:pb-14 scroll-mt-21 md:scroll-mt-28"
     >
-      <div className="text-center max-w-2xl mx-auto mb-8 md:mb-10">
-        <p className="text-sm font-semibold tracking-[0.25em] text-[#B8862F]">
-          NOSSOS SERVIÇOS
-        </p>
-        <h2 className="font-display font-bold text-3xl md:text-4xl mt-3">
-          Como podemos ajudar
-        </h2>
-        <span className="block h-0.5 w-24 bg-[#C89B3C] mt-5 mx-auto" />
-      </div>
+      {/* Revelar anima o conteúdo, não a <section> com id: o destino do link do menu não se desloca */}
+      <Revelar>
+        <div className="text-center max-w-2xl mx-auto mb-8 md:mb-10">
+          <p className="text-sm font-semibold tracking-[0.25em] text-[#B8862F]">
+            NOSSOS SERVIÇOS
+          </p>
+          <h2 className="font-display font-bold text-3xl md:text-4xl mt-3">
+            Como podemos ajudar
+          </h2>
+          <span className="block h-0.5 w-24 bg-[#C89B3C] mt-5 mx-auto" />
+        </div>
 
-      {/* items-start: abrir um card não estica os vizinhos */}
-      <div className="grid gap-3 lg:grid-cols-3 items-start">
-        {areas.map((area) => (
-          <CardArea key={area.titulo} area={area} onAbrir={abrir} />
-        ))}
-      </div>
+        {/* items-start: abrir um card não estica os vizinhos */}
+        <div className="grid gap-3 lg:grid-cols-3 items-start">
+          {areas.map((area) => (
+            <CardArea key={area.titulo} area={area} onAbrir={abrir} />
+          ))}
+        </div>
+      </Revelar>
 
       {detalhe && (
         <CardDetalhe detalhe={detalhe} visivel={visivel} onFechar={fechar} />
@@ -348,7 +352,7 @@ function CardArea({
   return (
     <article
       // lg (1024px) tem 3 colunas estreitas: padding, ícone e título encolhem só nessa faixa
-      className={`rounded-3xl p-6 md:p-8 lg:p-6 xl:p-8 transition duration-300 hover:-translate-y-1 hover:shadow-xl ${t.card}`}
+      className={`rounded-3xl p-6 md:p-8 lg:p-6 xl:p-8 transition duration-300 hover:-translate-y-1 hover:shadow-xl has-[>button:active]:scale-[0.98] ${t.card}`}
     >
       <button
         type="button"
@@ -437,7 +441,7 @@ function CardArea({
                     type="button"
                     aria-haspopup="dialog"
                     onClick={(e) => onAbrir(area, item, e.currentTarget)}
-                    className={`group/chip ${chipBase} ${t.chip} cursor-pointer transition duration-200 hover:-translate-y-0.5 hover:scale-105 hover:shadow-lg`}
+                    className={`group/chip ${chipBase} ${t.chip} cursor-pointer transition duration-200 active:scale-95 hover:-translate-y-0.5 hover:scale-105 hover:shadow-lg`}
                   >
                     {item.nome}
                     <IconeSeta />
@@ -597,7 +601,7 @@ function CardDetalhe({
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => onFechar()}
-            className={`mt-8 inline-flex items-center gap-2 font-bold px-6 py-3 rounded-md transition duration-200 hover:scale-105 ${t.cta}`}
+            className={`mt-8 inline-flex items-center gap-2 font-bold px-6 py-3 rounded-md transition duration-200 hover:scale-105 active:scale-95 ${t.cta}`}
           >
             <IconeWhatsApp />
             Suporte técnico

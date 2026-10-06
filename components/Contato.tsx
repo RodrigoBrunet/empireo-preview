@@ -2,6 +2,7 @@
 import { useState, type FormEvent, type ReactNode } from "react";
 import { areas, IconeWhatsApp } from "@/components/Servicos";
 import { contato, linkWhatsApp } from "@/lib/contato";
+import Revelar from "@/components/Revelar";
 
 // Máscara de telefone ao digitar: (00) 0000-0000 para fixo e (00) 00000-0000
 // para celular — o formato muda sozinho quando passa de 10 dígitos
@@ -49,129 +50,132 @@ export default function Contato() {
       id="contato"
       className="max-w-7xl mx-auto px-4 md:px-6 pb-10 md:pb-14 scroll-mt-21 md:scroll-mt-28"
     >
-      <div className="grid gap-3 lg:grid-cols-5">
-        {/* Card azul estilizado, no padrão do Hero: degradê, grade de planta técnica
-            e anéis dourados no canto, como ondas de sinal */}
-        <div className="relative overflow-hidden flex flex-col justify-between gap-10 rounded-3xl lg:rounded-br-none p-6 sm:p-8 md:p-10 lg:col-span-2 text-white bg-linear-to-br from-[#0046A6] to-[#002B6B]">
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 mask-[linear-gradient(to_bottom_left,black,transparent_80%)]"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)",
-              backgroundSize: "40px 40px",
-            }}
-          />
-          <div aria-hidden="true" className="pointer-events-none absolute -right-24 -bottom-24">
-            {[0, 1, 2].map((i) => (
-              <span
-                key={i}
-                className="absolute rounded-full border border-[#E9C46A]"
-                style={{
-                  width: `${160 + i * 110}px`,
-                  height: `${160 + i * 110}px`,
-                  right: `${-i * 55}px`,
-                  bottom: `${-i * 55}px`,
-                  opacity: 0.6 - i * 0.18,
-                }}
-              />
-            ))}
-            <span className="block h-40 w-40 rounded-full bg-[#E9C46A]/25 blur-2xl" />
-          </div>
-
-          <div className="relative">
-            <div className="flex items-center gap-3">
-              <span className="h-1 w-12 rounded-full bg-linear-to-r from-[#B8862F] via-[#E9C46A] to-[#B8862F]" />
-              <span className="text-xs md:text-sm font-semibold tracking-[0.25em] text-[#E9C46A]">
-                FALE CONOSCO
-              </span>
+      {/* Revelar anima o conteúdo, não a <section> com id: o destino do link do menu não se desloca */}
+      <Revelar>
+        <div className="grid gap-3 lg:grid-cols-5">
+          {/* Card azul estilizado, no padrão do Hero: degradê, grade de planta técnica
+              e anéis dourados no canto, como ondas de sinal */}
+          <div className="relative overflow-hidden flex flex-col justify-between gap-10 rounded-3xl lg:rounded-br-none p-6 sm:p-8 md:p-10 lg:col-span-2 text-white bg-linear-to-br from-[#0046A6] to-[#002B6B]">
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 mask-[linear-gradient(to_bottom_left,black,transparent_80%)]"
+              style={{
+                backgroundImage:
+                  "linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)",
+                backgroundSize: "40px 40px",
+              }}
+            />
+            <div aria-hidden="true" className="pointer-events-none absolute -right-24 -bottom-24">
+              {[0, 1, 2].map((i) => (
+                <span
+                  key={i}
+                  className="absolute rounded-full border border-[#E9C46A]"
+                  style={{
+                    width: `${160 + i * 110}px`,
+                    height: `${160 + i * 110}px`,
+                    right: `${-i * 55}px`,
+                    bottom: `${-i * 55}px`,
+                    opacity: 0.6 - i * 0.18,
+                  }}
+                />
+              ))}
+              <span className="block h-40 w-40 rounded-full bg-[#E9C46A]/25 blur-2xl" />
             </div>
-            <h2 className="font-display font-bold uppercase text-3xl md:text-5xl mt-4">
-              Contato
-            </h2>
-            <p className="mt-4 text-white/80 leading-relaxed max-w-sm">
-              Conte o seu desafio: retornamos com a solução de engenharia e
-              segurança do trabalho ideal para a sua empresa.
-            </p>
-          </div>
 
-          <ul className="relative space-y-3">
-            <LinhaContato href={`tel:+55${contato.telefone.replace(/\D/g, "")}`} icone={<IconeTelefone />}>
-              {contato.telefone}
-            </LinhaContato>
-            <LinhaContato href={`mailto:${contato.email}`} icone={<IconeEmail />}>
-              {contato.email}
-            </LinhaContato>
-          </ul>
-        </div>
-
-        {/* Card do formulário (faixa dourada no topo, como em Sobre nós) */}
-        <div className="relative overflow-hidden bg-white rounded-3xl lg:rounded-bl-none p-6 sm:p-8 md:p-12 lg:col-span-3">
-          <span className="absolute inset-x-0 top-0 h-1.5 bg-linear-to-r from-[#B8862F] via-[#E9C46A] to-[#B8862F]" />
-
-          <h3 className="font-display font-bold text-2xl md:text-3xl">
-            Envie sua mensagem
-          </h3>
-          <p className="mt-2 text-gray-700">
-            Preencha os campos e continue a conversa pelo WhatsApp.
-          </p>
-
-          <form onSubmit={enviar} className="mt-8 grid gap-4 sm:grid-cols-2">
-            <label className="grid gap-1.5 text-sm font-semibold">
-              Nome
-              <input name="nome" required autoComplete="name" className={campo} placeholder="Seu nome" />
-            </label>
-            <label className="grid gap-1.5 text-sm font-semibold">
-              Telefone <span className="sr-only">(opcional)</span>
-              <input
-                name="telefone"
-                type="tel"
-                inputMode="numeric"
-                autoComplete="tel-national"
-                value={telefone}
-                onChange={(e) => setTelefone(mascaraTelefone(e.target.value))}
-                maxLength={15}
-                className={campo}
-                placeholder="(00) 00000-0000"
-              />
-            </label>
-            <label className="grid gap-1.5 text-sm font-semibold sm:col-span-2">
-              Serviço de interesse
-              <select name="servico" defaultValue="" className={campo}>
-                <option value="">Selecione (opcional)</option>
-                {areas.map((area) => (
-                  <option key={area.titulo}>{area.titulo}</option>
-                ))}
-                <option>Outro</option>
-              </select>
-            </label>
-            <label className="grid gap-1.5 text-sm font-semibold sm:col-span-2">
-              Mensagem
-              <textarea
-                name="mensagem"
-                required
-                rows={4}
-                className={`${campo} resize-none`}
-                placeholder="Conte como podemos ajudar"
-              />
-            </label>
-
-            <div className="sm:col-span-2 flex flex-wrap items-center gap-4 mt-2">
-              <button
-                type="submit"
-                className="inline-flex items-center gap-2 bg-[#0046A6] text-white font-bold px-6 py-3 rounded-md cursor-pointer transition duration-200 hover:bg-[#E9C46A] hover:text-[#002B6B] hover:scale-105"
-              >
-                <IconeWhatsApp />
-                Enviar pelo WhatsApp
-              </button>
-              {/* aria-live: leitores de tela anunciam a confirmação */}
-              <p aria-live="polite" className="text-sm text-gray-700">
-                {enviado && "Abrimos o WhatsApp em uma nova aba com a sua mensagem."}
+            <div className="relative">
+              <div className="flex items-center gap-3">
+                <span className="h-1 w-12 rounded-full bg-linear-to-r from-[#B8862F] via-[#E9C46A] to-[#B8862F]" />
+                <span className="text-xs md:text-sm font-semibold tracking-[0.25em] text-[#E9C46A]">
+                  FALE CONOSCO
+                </span>
+              </div>
+              <h2 className="font-display font-bold uppercase text-3xl md:text-5xl mt-4">
+                Contato
+              </h2>
+              <p className="mt-4 text-white/80 leading-relaxed max-w-sm">
+                Conte o seu desafio: retornamos com a solução de engenharia e
+                segurança do trabalho ideal para a sua empresa.
               </p>
             </div>
-          </form>
+
+            <ul className="relative space-y-3">
+              <LinhaContato href={`tel:+55${contato.telefone.replace(/\D/g, "")}`} icone={<IconeTelefone />}>
+                {contato.telefone}
+              </LinhaContato>
+              <LinhaContato href={`mailto:${contato.email}`} icone={<IconeEmail />}>
+                {contato.email}
+              </LinhaContato>
+            </ul>
+          </div>
+
+          {/* Card do formulário (faixa dourada no topo, como em Sobre nós) */}
+          <div className="relative overflow-hidden bg-white rounded-3xl lg:rounded-bl-none p-6 sm:p-8 md:p-12 lg:col-span-3">
+            <span className="absolute inset-x-0 top-0 h-1.5 bg-linear-to-r from-[#B8862F] via-[#E9C46A] to-[#B8862F]" />
+
+            <h3 className="font-display font-bold text-2xl md:text-3xl">
+              Envie sua mensagem
+            </h3>
+            <p className="mt-2 text-gray-700">
+              Preencha os campos e continue a conversa pelo WhatsApp.
+            </p>
+
+            <form onSubmit={enviar} className="mt-8 grid gap-4 sm:grid-cols-2">
+              <label className="grid gap-1.5 text-sm font-semibold">
+                Nome
+                <input name="nome" required autoComplete="name" className={campo} placeholder="Seu nome" />
+              </label>
+              <label className="grid gap-1.5 text-sm font-semibold">
+                Telefone <span className="sr-only">(opcional)</span>
+                <input
+                  name="telefone"
+                  type="tel"
+                  inputMode="numeric"
+                  autoComplete="tel-national"
+                  value={telefone}
+                  onChange={(e) => setTelefone(mascaraTelefone(e.target.value))}
+                  maxLength={15}
+                  className={campo}
+                  placeholder="(00) 00000-0000"
+                />
+              </label>
+              <label className="grid gap-1.5 text-sm font-semibold sm:col-span-2">
+                Serviço de interesse
+                <select name="servico" defaultValue="" className={campo}>
+                  <option value="">Selecione (opcional)</option>
+                  {areas.map((area) => (
+                    <option key={area.titulo}>{area.titulo}</option>
+                  ))}
+                  <option>Outro</option>
+                </select>
+              </label>
+              <label className="grid gap-1.5 text-sm font-semibold sm:col-span-2">
+                Mensagem
+                <textarea
+                  name="mensagem"
+                  required
+                  rows={4}
+                  className={`${campo} resize-none`}
+                  placeholder="Conte como podemos ajudar"
+                />
+              </label>
+
+              <div className="sm:col-span-2 flex flex-wrap items-center gap-4 mt-2">
+                <button
+                  type="submit"
+                  className="inline-flex items-center gap-2 bg-[#0046A6] text-white font-bold px-6 py-3 rounded-md cursor-pointer transition duration-200 active:scale-95 hover:bg-[#E9C46A] hover:text-[#002B6B] hover:scale-105"
+                >
+                  <IconeWhatsApp />
+                  Enviar pelo WhatsApp
+                </button>
+                {/* aria-live: leitores de tela anunciam a confirmação */}
+                <p aria-live="polite" className="text-sm text-gray-700">
+                  {enviado && "Abrimos o WhatsApp em uma nova aba com a sua mensagem."}
+                </p>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
+      </Revelar>
     </section>
   );
 }
@@ -181,7 +185,7 @@ function LinhaContato({ href, icone, children }: { href: string; icone: ReactNod
     <li>
       <a
         href={href}
-        className="group inline-flex items-center gap-3 text-base md:text-lg font-semibold transition hover:text-[#E9C46A]"
+        className="group inline-flex items-center gap-3 active:scale-95 text-base md:text-lg font-semibold transition hover:text-[#E9C46A]"
       >
         <span className="h-10 w-10 shrink-0 rounded-full border border-white/30 bg-white/10 flex items-center justify-center transition group-hover:border-[#E9C46A] group-hover:bg-[#E9C46A] group-hover:text-[#002B6B]">
           {icone}
