@@ -331,6 +331,28 @@ export default function Servicos() {
         </div>
       </Revelar>
 
+      {/* SEO: as descrições só aparecem no card de detalhe (montado ao clicar), então
+          não estariam no HTML estático. Esta cópia invisível na tela (sr-only) deixa
+          o texto completo legível para buscadores e leitores de tela */}
+      <div className="sr-only">
+        {areas.map((area) => (
+          <section key={area.titulo}>
+            <h3>{area.titulo}</h3>
+            {area.itens.map((item) => (
+              <article key={item.nome}>
+                <h4>{item.nome}</h4>
+                {item.descricao
+                  .split(/\n\s*\n/)
+                  .filter(Boolean)
+                  .map((paragrafo) => (
+                    <p key={paragrafo}>{paragrafo}</p>
+                  ))}
+              </article>
+            ))}
+          </section>
+        ))}
+      </div>
+
       {detalhe && (
         <CardDetalhe detalhe={detalhe} visivel={visivel} onFechar={fechar} />
       )}

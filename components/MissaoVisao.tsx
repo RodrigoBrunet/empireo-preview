@@ -50,6 +50,9 @@ const cards: Card[] = [
 export default function MissaoVisao() {
   return (
     <section className="max-w-7xl mx-auto px-4 md:px-6 pb-10 md:pb-14">
+      {/* Título só para buscadores e leitores de tela (sr-only): os cards usam h3,
+          e sem um h2 acima a hierarquia de títulos da página pularia um nível */}
+      <h2 className="sr-only">Missão e foco da Empireo</h2>
       <div className="grid gap-3 md:grid-cols-2">
         {cards.map(({ rotulo, titulo, texto, Icone, estilo }) => (
           <article
