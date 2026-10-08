@@ -183,27 +183,99 @@ e tubulações industriais favor entrar em contato com o suporte técnico da Emp
     itens: [
       {
         nome: "NR-12",
-        descricao: "",
+        descricao: `A inspeção em máquinas e equipamentos segundo as diretrizes da normativa NR-12 é de
+fundamental importância para garantir a segurança dos trabalhadores, prevenindo acidentes
+de trabalho. Acidentes de trabalho causados pela não conformidade das máquinas e
+equipamentos à NR-12 geram sérios problemas financeiros para as empresas incluindo:
+despesas médicas; pagamentos de multas aplicadas por órgãos fiscalizadores (ex.: Justiça do
+Trabalho); indenizações. Há também outros graves danos como: eventual interrupção do
+processo produtivo da empresa; desgaste da sua imagem perante o mercado; além do estado
+físico-psicológico e emocional do tralhador e sua família abalados após o acidente de
+trabalho.
+A Empireo tem mais de 15 anos de experiência com vistorias em máquinas e equipamentos
+segundo as diretrizes da NR-12. A metodologia utilizada pela Empireo é a realização de
+uma vistoria com emissão de um laudo inicial, indicando pontos em não concordância com a
+NR-12, e orientando sobre os procedimentos a serem feitos para a adequação das máquinas
+e equipamentos sob vistoria. Após a adequação das máquinas e equipamentos, o profissional
+da Empireo realiza uma segunda vistoria para atestar se as máquinas e equipamentos estão
+em concordância com os parâmetros abordados na normativa NR-12. Todo o procedimento
+é feito em perfeita consonância com os órgãos fiscalizadores, dentre eles o CREA através da
+emissão da ART (Anotação de Responsabilidade Técnica), que dá validade jurídica aos
+laudos emitidos.
+Para mais informações sobre vistorias em máquinas e equipamentos segundo a
+normativa NR-12 realizadas pela Empireo, favor entrar em contato com o nosso
+suporte técnico.`,
       },
       {
         nome: "Vasos de pressão e caldeiras",
-        descricao: "",
+        descricao: `A Empireo tem vasta experiência em inspeções e vistorias em vasos de pressão e caldeiras,
+em obediência à normativa ABNT NBR-13, e outras normativas afins. As inspeções e
+vistorias são realizadas nas periodicidades previstas na normativa, e também em
+circunstâncias que eventualmente possuam comprometer a integridade estrutural do vaso de
+pressão e/ou caldeira. A Empireo gera toda a documentação exigida pela normativa, tais
+como: prontuário do equipamento; registro da vistoria/inspeção; relatório da
+vistoria/inspeção; projeto do equipamento e instalação do mesmo; e certificação de
+calibragem dos acessórios de segurança do equipamento.
+Toda a documentação exigida pela normativa NR-13, e outras afins, gerada na vistoria do
+vaso de pressão e/ou caldeira tem validade jurídica via emissão de Anotação de
+Responsabilidade Técnica (ART) junto ao CREA.
+Para conhecer com maior detalhes os nossos serviços de vistoria e inspeção em vasos de
+pressão e caldeiras, favor entrar em contato com o nosso suporte técnico.`,
       },
       {
         nome: "Modernização de elevadores",
-        descricao: "",
+        descricao: `A Empireo realiza trabalho de fiscalização de modernização de elevadores para empresas
+públicas e privadas. A empresa já fiscalizou serviços de modernização de elevadores para
+órgãos públicos importantes, tais como: Tribunal Regional Eleitoral do Estado de Goiás
+(TRE-GO), e Núcleo Estadual do Ministério da Saúde em Goiás.
+A modernização de elevadores através da substituição de sistemas antigos por tecnologias
+modernas, proporciona a redução tanto no consumo de energia elétrica quanto nas falhas
+frequentes do equipamento. Além disso, há outros pontos importantes para serem
+considerados, tais como: menor tempo de espera para os usuários do equipamento, e a
+adequação às normas de acessibilidade vigentes no Brasil.
+Para maiores detalhes do serviço de fiscalização de modernização de elevadores realizado
+pela Empireo, favor entrar em contato com o suporte técnico.`,
       },
       {
         nome: "Rede de GLP",
-        descricao: "",
+        descricao: `Inspeções periódicas em redes de GLP são de fundamental importância para
+prevenir riscos de vazamento, explosões e acidentes. A Empireo tem
+clientes/parceiros importantes que demandam inspeções em redes de GLP em
+suas várias instalações, sempre orientada pelas normativas vigentes da ABNT,
+instrução técnica, e norma técnica do Corpo de Bombeiros. A Empireo realiza a
+inspeção na rede de GLP, e emite toda a documentação exigida pelas normativas,
+deixando a sua empresa segura e regularizada com os órgãos fiscalizadores.
+Para mais informações sobre os nossos trabalhos de inspeções em redes de GLP,
+favor entrar em contato com o nosso suporte técnico.`,
       },
       {
         nome: "Teste de estanqueidade",
-        descricao: "",
+        descricao: `Os testes de estanqueidade tem por objetivo verificar se há vazamentos em tubulações e seus
+acessórios, mangueiras, tanques de armazenamento, dentre outros equipamentos. Há várias
+normativas vigentes que regulam os testes de estanqueidade, variando na abordagem de
+acordo com o fluido, instalações e aplicações.
+A Empireo tem um corpo técnico preparado, e os dispositivos e aparelhos para mensurar,
+verificar e atestar a integridade de objeto de realização do teste de estanqueidade, e para
+todas as abordagens das normativas vigentes.
+Entre em contato com o nosso suporte técnico para conhecer os nossos trabalhos de teste de
+estanqueidade.`,
       },
       {
         nome: "Vida útil e bom funcionamento de máquinas e equipamentos",
-        descricao: "",
+        descricao: `A Empireo possui profissionais experientes na vistoria de máquinas e equipamentos para
+atestar o bom funcionamento e/ou a vida útil das mesmas. Nos laudos técnicos os
+profissionais da Empireo vistoriam a segurança da máquina/equipamento, avaliando o grau
+de risco a que o trabalhador está exposto. Também é realizada manutenção preditiva para
+detectar eventuais anomalias em componentes mecânicos, que podem evoluir para futuras
+falhas. Além disso, é avaliado o desempenho da máquina e/ou equipamento, e é feita uma
+estimativa da sua durabilidade técnica. Após a realização da vistoria, a Empireo elabora
+documentação técnica, que é devidamente anotada no CREA para dar validade jurídica.
+Esse trabalho de vistoria de vida útil e bom funcionamento de máquinas e equipamentos são
+de extrema importância em: processos de compra de máquinas usadas; empresas de locação
+de máquinas e equipamentos; seguradoras; bancos e instituições financiadoras; além de
+perícias para o poder judiciário.
+Entre em contato com o nosso suporte técnico para conhecer com maiores detalhes os
+nossos trabalhos de vistoria de vida útil e bom funcionamento de máquinas e equipamentos.`,
       },
     ],
   },

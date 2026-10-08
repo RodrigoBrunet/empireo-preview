@@ -53,13 +53,62 @@ export default function Footer() {
           </Coluna>
 
           <Coluna titulo="Contato">
+            {/* Telefone e e-mail com ícone, alinhados ao pino do endereço abaixo */}
             <li>
-              <LinkRodape href={`tel:+55${contato.telefone.replace(/\D/g, "")}`}>
+              <a
+                href={`tel:+55${contato.telefone.replace(/\D/g, "")}`}
+                className="flex items-start gap-2 text-white/80 transition hover:text-[#E9C46A]"
+              >
+                <IconeContato>
+                  <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
+                </IconeContato>
                 {contato.telefone}
-              </LinkRodape>
+              </a>
             </li>
             <li>
-              <LinkRodape href={`mailto:${contato.email}`}>{contato.email}</LinkRodape>
+              <a
+                href={`mailto:${contato.email}`}
+                className="flex items-start gap-2 text-white/80 transition hover:text-[#E9C46A]"
+              >
+                <IconeContato>
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="M3 7l9 6 9-6" />
+                </IconeContato>
+                {contato.email}
+              </a>
+            </li>
+            <li>
+              {/* <address>: elemento próprio para o contato da empresa (lido pelo Google);
+                  abre o Google Maps em nova aba */}
+              <address className="not-italic">
+                <a
+                  href={contato.endereco.mapa}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-start gap-2 text-white/80 leading-relaxed transition hover:text-[#E9C46A]"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={1.8}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                    className="h-4 w-4 shrink-0 mt-0.5 text-[#E9C46A]"
+                  >
+                    <path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z" />
+                    <circle cx="12" cy="9" r="2.5" />
+                  </svg>
+                  <span>
+                    {contato.endereco.linhas.map((linha) => (
+                      <span key={linha} className="block">
+                        {linha}
+                      </span>
+                    ))}
+                  </span>
+                </a>
+              </address>
             </li>
           </Coluna>
 
@@ -95,6 +144,24 @@ function Coluna({ titulo, children }: { titulo: string; children: ReactNode }) {
       <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#E9C46A]">{titulo}</p>
       <ul className="mt-5 space-y-3 text-sm">{children}</ul>
     </div>
+  );
+}
+
+// Ícone dourado dos itens da coluna Contato (mesmo tamanho e alinhamento do pino do endereço)
+function IconeContato({ children }: { children: ReactNode }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.8}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className="h-4 w-4 shrink-0 mt-0.5 text-[#E9C46A]"
+    >
+      {children}
+    </svg>
   );
 }
 
