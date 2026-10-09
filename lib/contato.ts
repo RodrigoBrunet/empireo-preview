@@ -5,8 +5,8 @@ export const contato = {
   whatsapp: "5562993230990",
   telefone: "(62) 99323-0990",
   email: "contato@empireo.com.br",
-  // TODO: link do perfil da Empireo (ex.: https://www.instagram.com/empireo)
-  instagram: "#",
+  // Perfil sem os parâmetros de rastreio do link de compartilhamento (utm_source, exln)
+  instagram: "https://www.instagram.com/empireoengenharia7/",
   // Endereço escrito sempre igual (site, Google, cartões): consistência ajuda na busca local
   endereco: {
     // Uma linha por parte do endereço;   (espaço que não quebra) mantém
