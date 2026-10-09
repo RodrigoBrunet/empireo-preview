@@ -57,7 +57,8 @@ export default function Footer() {
             <li>
               <a
                 href={`tel:+55${contato.telefone.replace(/\D/g, "")}`}
-                className="flex items-start gap-2 text-white/80 transition hover:text-[#E9C46A]"
+                // Ligar só em aparelhos de toque; com mouse (pointer-fine:) vira texto comum
+                className="flex items-start gap-2 text-white/80 transition hover:text-[#E9C46A] pointer-fine:pointer-events-none pointer-fine:select-text"
               >
                 <IconeContato>
                   <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />

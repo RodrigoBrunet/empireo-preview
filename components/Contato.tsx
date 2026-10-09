@@ -99,7 +99,7 @@ export default function Contato() {
             </div>
 
             <ul className="relative space-y-3">
-              <LinhaContato href={`tel:+55${contato.telefone.replace(/\D/g, "")}`} icone={<IconeTelefone />}>
+              <LinhaContato href={`tel:+55${contato.telefone.replace(/\D/g, "")}`} icone={<IconeTelefone />} soToque>
                 {contato.telefone}
               </LinhaContato>
               <LinhaContato href={`mailto:${contato.email}`} icone={<IconeEmail />}>
@@ -180,12 +180,26 @@ export default function Contato() {
   );
 }
 
-function LinhaContato({ href, icone, children }: { href: string; icone: ReactNode; children: ReactNode }) {
+function LinhaContato({
+  href,
+  icone,
+  children,
+  soToque = false,
+}: {
+  href: string;
+  icone: ReactNode;
+  children: ReactNode;
+  // Só clicável em aparelhos de toque (celular/tablet). Com mouse (pointer-fine:) vira
+  // texto comum: no computador "ligar" não faz sentido e abriria um app de chamadas
+  soToque?: boolean;
+}) {
   return (
     <li>
       <a
         href={href}
-        className="group inline-flex items-center gap-3 active:scale-95 text-base md:text-lg font-semibold transition hover:text-[#E9C46A]"
+        className={`group inline-flex items-center gap-3 active:scale-95 text-base md:text-lg font-semibold transition hover:text-[#E9C46A] ${
+          soToque ? "pointer-fine:pointer-events-none pointer-fine:select-text" : ""
+        }`}
       >
         <span className="h-10 w-10 shrink-0 rounded-full border border-white/30 bg-white/10 flex items-center justify-center transition group-hover:border-[#E9C46A] group-hover:bg-[#E9C46A] group-hover:text-[#002B6B]">
           {icone}
