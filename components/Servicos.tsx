@@ -9,6 +9,9 @@ type Item = {
   nome: string;
   // TODO: textos de rascunho — revisar com a Empireo
   descricao: string;
+  // Só alguns tópicos: troca a mensagem padrão do WhatsApp ("…um orçamento de
+  // Área: Tópico.") por "…maiores informações sobre <assunto>."
+  assunto?: string;
 };
 
 type Area = {
@@ -40,6 +43,7 @@ export const areas: Area[] = [
       },
       {
         nome: "Inventor Professional e Inventor Nastran",
+        assunto: "os Treinamentos no Inventor Professional e Inventor Nastran",
         descricao: `A Empireo Engenharia e Segurança do Trabalho oferece treinamento nos softwares Autodesk Inventor Professional 2026 e Inventor Nastran 2026 para estudantes e profissionais que atuam na área de projetos mecânicos e estruturais. A Empireo tem planejamentos de cursos nos softwares mencionados para atender usuários desde o nível básico até o nível avançado, contemplando desde: a modelagem de elementos de máquinas e estruturas metálicas; montagem de conjuntos mecânicos e estruturas metálicas; simulação de funcionamento de conjuntos mecânicos; simulação e análise numérica de deformações de elementos e estruturas sob aplicação de forças: lineares e não-lineares; estáticas e dinâmicas; uniaxiais e multiaxiais; além do gerenciamento, apresentação e formalização de projetos executivos usando os softwares.
 
         O treinamento ofertado pela empresa Empireo na área de projetos mecânicos é voltado para o software Autodesk Inventor por alguns motivos. Primeiramente o Inventor é um software poderoso devido à modelagem paramétrica, que permite alterar dimensões e projetos inteiros de forma automática. Além disso, ele oferece ferramentas avançadas de simulação, testes de resistência mecânica e funções de automação que dinamizam o desenvolvimento de elementos de máquinas, conjuntos mecânicos complexos e estruturas metálicas. Várias empresas de grande porte no mundo, em diversos campos de atuação, utilizam o Inventor, tais como a: Boieng, Airbus, Siemens, entre outras.
@@ -118,6 +122,7 @@ metálicas favor entrar em contato com o suporte técnico da Empireo.`,
       },
       {
         nome: "Máquinas, equipamentos e dispositivos sob demanda",
+        assunto: "projetos de máquinas, equipamentos e dispositivos sob demanda",
         descricao: `O projeto de máquinas, equipamentos e dispositivos sob demanda é o destaque de serviços
 ofertados pela Empireo. Quando se trata de um projeto original o cliente ganha várias vantagens,
 dentre elas pode-se destacar: soluções integradas ao processo produtivo da sua empresa, ou seja,
@@ -600,7 +605,9 @@ function CardDetalhe({
 
   // "Solicitar orçamento" abre o WhatsApp direto, com o tópico já na mensagem
   const whatsapp = linkWhatsApp(
-    `Olá! Vim pelo site da Empireo e gostaria de um orçamento de ${area.titulo}: ${item.nome}.`,
+    item.assunto
+      ? `Olá! Vim pelo site da Empireo e gostaria de maiores informações sobre ${item.assunto}.`
+      : `Olá! Vim pelo site da Empireo e gostaria de um orçamento de ${area.titulo}: ${item.nome}.`,
   );
 
   return (
