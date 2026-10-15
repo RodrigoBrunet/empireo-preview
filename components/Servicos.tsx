@@ -30,31 +30,62 @@ export const areas: Area[] = [
     itens: [
       {
         nome: "NR-12 — Segurança em Máquinas e Equipamentos",
-        descricao: `A Empireo Engenharia e Segurança do Trabalho oferece treinamentos para a sua
-          empresa da normativa regulamentadora NR-12 do Ministério do Trabalho e Emprego,
-          adequando a sua empresa às exigências das legislações vigentes, e impactando em um
-          ambiente de trabalho seguro e saudável com resultados na qualidade e produtividade dos
-          cooperadores da sua empresa. Os treinamentos atendem à normativa mencionada e são
-          planejados para a realidade da sua empresa. Os profissionais da Empireo tem
-          experiência e são capacitados para a emissão de certificação para atender aos requisitos
-          exigidos pelo Ministério do Trabalho e Emprego.
-          Para maiores informações sobre o treinamento da NR-12 ofertado pela Empireo favor
-          entrar em contato com o suporte técnico.`,
+        descricao: `A Empireo Engenharia e Segurança do Trabalho Ltda oferece treinamentos
+especializados em conformidade com a Norma Regulamentadora NR-12, atendendo às
+exigências do Ministério do Trabalho e Emprego e contribuindo para a segurança, a
+produtividade e a conformidade legal da sua empresa. Nossos treinamentos são
+elaborados de forma personalizada, considerando as características e necessidades
+específicas de cada empresa. Contamos com profissionais altamente qualificados e
+experientes, aptos a ministrar conteúdos teóricos e práticos e a emitir a certificação
+necessária para o atendimento dos requisitos legais vigentes.
+Invista na capacitação da sua equipe e na segurança das suas operações. Para mais
+informações sobre os treinamentos de NR-12 oferecidos pela Empireo, entre em contato
+com nossa equipe de suporte técnico.`,
       },
       {
         nome: "Inventor Professional e Inventor Nastran",
         assunto: "os Treinamentos no Inventor Professional e Inventor Nastran",
-        descricao: `A Empireo Engenharia e Segurança do Trabalho oferece treinamento nos softwares Autodesk Inventor Professional 2026 e Inventor Nastran 2026 para estudantes e profissionais que atuam na área de projetos mecânicos e estruturais. A Empireo tem planejamentos de cursos nos softwares mencionados para atender usuários desde o nível básico até o nível avançado, contemplando desde: a modelagem de elementos de máquinas e estruturas metálicas; montagem de conjuntos mecânicos e estruturas metálicas; simulação de funcionamento de conjuntos mecânicos; simulação e análise numérica de deformações de elementos e estruturas sob aplicação de forças: lineares e não-lineares; estáticas e dinâmicas; uniaxiais e multiaxiais; além do gerenciamento, apresentação e formalização de projetos executivos usando os softwares.
+        descricao: `A Empireo oferece treinamento nos softwares Autodesk Inventor Professional 2026 e
+Inventor Nastran 2026 para estudantes e profissionais que atuam na área de projetos
+mecânicos e estruturais. A Empireo disponibiliza cursos estruturados nos softwares
+mencionados para atender usuários dos níveis básico, intermediário e avançado,
+contemplando modelagem de elementos de máquinas e estruturas metálicas, montagem
+de conjuntos mecânicos e estruturas metálicas, simulação de funcionamento de conjuntos
+mecânicos, além da simulação e análise numérica de deformações de elementos e
+estruturas submetidos à aplicação de forças lineares e não-lineares, estáticas e
+dinâmicas, uniaxiais e multiaxiais. Os treinamentos também abrangem o gerenciamento, a
+apresentação e a formalização de projetos executivos utilizando os softwares
+mencionados.
+Os treinamentos ofertados pela empresa Empireo na área de projetos mecânicos são
+voltados para o software Autodesk Inventor por alguns motivos. Primeiramente, o
+Inventor é um software poderoso devido à modelagem paramétrica, que permite alterar
+dimensões e projetos inteiros de forma automática. Além disso, ele oferece ferramentas
+avançadas de simulação, testes de resistência mecânica e funções de automação que
+dinamizam o desenvolvimento de elementos de máquinas, conjuntos mecânicos
+complexos e estruturas metálicas. Diversas empresas de grande porte, atuantes em
+diferentes segmentos da indústria, utilizam o Inventor em seus processos de engenharia e
+desenvolvimento de produtos, entre elas a Boeing, Airbus e Siemens, evidenciando a
+relevância e a confiabilidade da plataforma no mercado global.
+Para profissionais experientes no uso do Inventor, a Empireo oferece treinamento
+avançado em estruturas metálicas e conjuntos mecânicos complexos com foco em
+simulação e análise numérica sob condições de falhas complexas, tais como: fadiga;
+fluência; carga de impacto; desgaste superficial; corrosão, entre outras. Para essa
+abordagem mais profunda a Empireo faz uso do software Autodesk Inventor Nastran
+2026.
+O treinamento no Autodesk Inventor 2026 oferecido pela Empireo não se limita à
+aprendizagem dos comandos do software, mas também o aluno é estimulado à
+concepção de projetos tendo em vista cenários reais no cotidiano profissional.
+O responsável pelo treinamento no software Autodesk Inventor Professional 2026 e
+Inventor Nastran 2026 é licenciado pela Autodesk para a capacitação de profissionais.
+Tem mais de 25 anos de experiência na área de projetos mecânicos. É graduado em
 
-        O treinamento ofertado pela empresa Empireo na área de projetos mecânicos é voltado para o software Autodesk Inventor por alguns motivos. Primeiramente o Inventor é um software poderoso devido à modelagem paramétrica, que permite alterar dimensões e projetos inteiros de forma automática. Além disso, ele oferece ferramentas avançadas de simulação, testes de resistência mecânica e funções de automação que dinamizam o desenvolvimento de elementos de máquinas, conjuntos mecânicos complexos e estruturas metálicas. Várias empresas de grande porte no mundo, em diversos campos de atuação, utilizam o Inventor, tais como a: Boieng, Airbus, Siemens, entre outras.
-
-        Para profissionais experientes no uso do Inventor, a Empireo oferece treinamento avançado em estruturas metálicas e conjuntos mecânicos complexos com foco em simulação e análise numérica sob condições de falhas complexas, tais como: fadiga, fluência, impacto, desgaste superficial e corrosão, entre outras. Para essa abordagem mais profunda a Empireo faz uso do software Autodesk Inventor Nastran 2026.
-
-        O treinamento no Autodesk Inventor 2026 oferecido pela Empireo, não se limita à aprendizagem dos comandos do software, mas também o aluno é estimulado à concepção de projetos tendo em vista cenários reais no cotidiano profissional.
-
-        O responsável pelo treinamento no software Autodesk Inventor Professional 2026 e Inventor Nastran 2026 é licenciado pela Autodesk para a capacitação de profissionais. Tem mais de 25 anos de experiência na área de projetos mecânicos. É graduado em engenharia mecânica, e mestre e doutor na área de engenharia mecânica com foco em: tribologia; tratamento superficial; fenômenos de desgaste; fadiga de alto ciclo; plasticidade de corpos; fadiga multiaxial e fadiga por fretting em materiais e estruturas.
-
-        Conforme mencionado, a Empireo elabora planejamentos de cursos do Inventor Professional 2026 e do Inventor Nastran 2026 de acordo com o interesse e necessidade do usuário. Portanto, para maiores informações favor entrar em contato com o suporte técnico dos treinamentos.`,
+engenharia mecânica, e mestre e doutor na área de engenharia mecânica com foco em:
+tribologia; tratamento superficial; fenômenos de desgaste; fadiga de alto ciclo; plasticidade
+de corpos; fadiga multiaxial e fadiga por fretting em materiais e estruturas.
+Conforme mencionado, a Empireo elabora planejamentos de cursos do Inventor
+Professional 2026 e do Inventor Nastran 2026 de acordo com o interesse e necessidade
+do usuário. Portanto, para mais informações favor entrar em contato com o suporte
+técnico dos treinamentos.`,
       },
     ],
   },
@@ -67,117 +98,134 @@ export const areas: Area[] = [
         nome: "Sistemas de climatização, exaustão, ventilação e renovação de ar",
         descricao: `A Empireo tem vasta experiência com projetos e execução de sistemas de climatização,
 refrigeração, exaustão, ventilação e renovação de ar de médio e grande porte. Sistemas de
-climatização de centrais, tais como: Self-contained, chiller a ar, chiller a água, entre outros. Além de
-projetos e execuções de sistemas VRF (Fluxo de Refrigerante Variável no tempo).
+climatização de centrais, tais como: self-contained; chiller a ar; chiller a água, entre outros. Além de
+projetos e execuções de sistemas VRF (Fluxo de Refrigerante Variável).
 A Empireo também elabora projetos e executa sistemas de exaustão e ventilação de pequeno e
-grande porte, para ambientes como: soldagem; cozinhas comerciais e industriais; sistemas de
-ventilação para conforto térmico, e controle de proliferação de vírus, bactérias e aerossóis nocivos
-em alguns ambientes de fábricas e galpões. Também elaboramos e executamos sistemas de exaustão
-para laboratórios que exigem constante eliminação de vapores químicos, odores e substâncias
-tóxicas de forma segura.
+grande porte, para ambientes como: áreas de operação de soldagem; cozinhas comerciais e
+industriais; sistemas de ventilação para conforto térmico, e controle de proliferação de vírus,
+bactérias, bem como da dispersão de aerossóis nocivos. Também elaboramos e executamos sistemas
+de exaustão para laboratórios que exigem constante eliminação de vapores químicos, odores e
+substâncias tóxicas de forma segura.
 A Empireo desenvolve sistemas de renovação de ar exigidos por normativas para quaisquer
 ambientes. Com destaque para ambientes específicos, e que exigem esterilização, tais como: salas
-cirúrgicas, laboratórios farmacêuticos, clínicas, salas odontológicas, Unidades de Terapia Intensiva
-(UTI), entre outros ambientes e circunstâncias.
-Os projetos são elaborados de forma personalizada, e seguindo as normativas regulamentadoras
-vigentes. Todos os projetos são executivos e contemplam: projeto base, cálculo de perda de carga,
-cálculo de dimensionamento de dutos (caso de centrais, retorno e sistemas de renovação de ar),
-cálculo de tubulações e outros acessórios (caso de sistema de chiller a água), memorial descritivo,
-projeto gráfico, apresentação, e planilha orçamentária.
-Para maiores informações sobre os nossos projetos e obras executadas dos sistemas
-mencionados acima favor entrar em contato com o suporte técnico da Empireo.`,
+cirúrgicas, laboratórios farmacêuticos, clínicas, consultórios odontológicos, Unidades de Terapia
+Intensiva (UTI), entre outros ambientes e circunstâncias.
+Os projetos são elaborados de forma personalizada e em conformidade com as normas
+regulamentadoras vigentes. Todos os projetos são executivos e contemplam: projeto base, cálculo
+de perda de carga, cálculo de dimensionamento de dutos (caso de centrais, retorno e sistemas de
+renovação de ar), cálculo de tubulações e outros acessórios (caso de sistema de chiller a água),
+memorial descritivo, projeto gráfico, apresentação e planilha orçamentária.
+Para mais informações sobre os nossos projetos e obras executadas relacionadas aos
+sistemas mencionados acima, por favor entrar em contato com o suporte técnico da
+Empireo.`,
       },
       {
         nome: "Pressurização de escadas",
         descricao: `A Empireo possui um corpo técnico competente para elaborar e executar projetos de pressurização
-de escada, e sempre seguindo as orientações da normativa ABNT NBR-14880, além das instruções
-(normas técnicas) do Corpo de Bombeiros, de forma a garantir um sistema seguro e eficiente.
-Os projetos de pressurização de escada são elaborados de forma personalizada, e seguindo as
-normativas regulamentadoras vigentes. Os projetos são executivos e contemplam: projeto base,
-cálculo de dimensionamento do sistema, memorial descritivo, apresentação, e planilha
-orçamentária.
-Para maiores informações sobre os nossos projetos e obras executadas de sistemas de
-pressurização de escada favor entrar em contato com o suporte técnico da Empireo.`,
+de escada e sempre seguindo as orientações da normativa ABNT NBR-14880, além das normas
+técnicas do Corpo de Bombeiros, de forma a garantir um sistema seguro e eficiente.
+Os projetos de pressurização de escada são elaborados de forma personalizada e em conformidade
+com as normas técnicas vigentes. Os projetos são executivos e contemplam: projeto base, cálculo de
+dimensionamento do sistema, memorial descritivo, apresentação e planilha orçamentária.
+Para mais informações sobre os nossos projetos e obras executadas na área de
+pressurização de escada, por favor entrar em contato com o suporte técnico da Empireo.`,
       },
       {
         nome: "Estruturas metálicas",
-        descricao: `A Empireo Engenharia e Segurança do Trabalho Ltda. possui profissional técnico com vasta
-experiência técnica na área de projetos de estruturas metálicas. Todos os projetos são desenvolvidos
-com foco em segurança, qualidade e baixo custo de execução. Os projetos são desenvolvidos
-utilizando o software Inventor Professional, em conjunto com o software Inventor Nastran, de
-forma a simular carregamentos a que a estrutura metálica será submetida em cenário real, e analisar
-numericamente o comportamento da estrutura metálica sob condições diversas. A experiência de
-mais de 25 anos do corpo técnico da Empireo com projetos de estruturas metálicas, aliada com uma
-formação acadêmica em nível de doutorado na área de engenharia mecânica, com foco em:
-tribologia; tratamento superficial; fenômenos de desgaste; fadiga de alto ciclo; plasticidade de
-corpos; fadiga multiaxial e fadiga por fretting; proporcionam uma qualidade, segurança e relativo
-baixo custo nos projetos executados de estruturas metálicas. As normativas técnicas ABNT NBR-
-8800, NBR-6123, NBR-6120, NBR-14762, NBR-14323, NBR-16239, NBR-5419, NBR-8681, e
-outras normativas afins são seguidas de forma rigorosa pela Empireo.
-Os projetos são elaborados de forma personalizada. Todos os projetos são executivos e contemplam:
-projeto base, cálculos de dimensionamento, relatórios de simulação de carregamento e análise
-numérica, projeto gráfico, apresentação, e planilha orçamentária.
-Para maiores informações sobre os nossos projetos e obras executadas de estruturas
-metálicas favor entrar em contato com o suporte técnico da Empireo.`,
+        descricao: `A Empireo Engenharia e Segurança do Trabalho Ltda. conta com profissionais altamente
+qualificados e ampla experiência no desenvolvimento de projetos de estruturas metálicas. Todos os
+projetos são desenvolvidos com foco em segurança, qualidade, desempenho estrutural e otimização
+dos custos de execução. Os projetos são desenvolvidos utilizando o software Inventor Professional,
+em conjunto com o software Inventor Nastran, que permitem a simulação das condições reais de
+carregamentos às quais a estrutura será submetida, bem como a realização de análises numéricas
+para a avaliação do seu comportamento em diferentes cenários operacionais. A experiência de mais
+de 25 anos do corpo técnico da Empireo com projetos de estruturas metálicas, aliada com uma
+formação acadêmica em nível de doutorado em engenharia mecânica, com atuação nas áreas de
+tribologia, tratamentos superficiais, fenômenos de desgaste, fadiga de alto ciclo, plasticidade de
+corpos, fadiga multiaxial e fadiga por fretting, proporcionam elevados padrões de qualidade e
+segurança, aliados à busca permanente por soluções tecnicamente eficientes e economicamente
+viáveis. As normas técnicas ABNT NBR-8800, NBR-6123, NBR-6120, NBR-14762, NBR-14323,
+NBR-16239, NBR-5419, NBR-8681, e outras normas técnicas afins são seguidas de forma rigorosa
+pela Empireo.
+Os projetos são elaborados de forma personalizada, considerando as necessidades específicas de
+cada cliente e as particularidades de cada empreendimento. Todos os projetos são executivos e
+contemplam: projeto base, cálculos de dimensionamento, relatórios de simulação de carregamento e
+análise numérica, projeto gráfico, apresentação, e planilha orçamentária.
+Para mais informações sobre os nossos projetos e obras executadas de estruturas
+metálicas, por favor entrar em contato com o suporte técnico da Empireo.`,
       },
       {
         nome: "Máquinas, equipamentos e dispositivos sob demanda",
-        assunto: "projetos de máquinas, equipamentos e dispositivos sob demanda",
+        assunto:
+          "projetos de máquinas, equipamentos e dispositivos sob demanda",
         descricao: `O projeto de máquinas, equipamentos e dispositivos sob demanda é o destaque de serviços
-ofertados pela Empireo. Quando se trata de um projeto original o cliente ganha várias vantagens,
-dentre elas pode-se destacar: soluções integradas ao processo produtivo da sua empresa, ou seja,
-sem alterar o balanceamento da “Curva V” da linha de produção. Além disso, o cliente tem a
-oportunidade de apresentar à Empireo os objetivos desejados pela máquina/equipamento/dispositivo
-a ser projetada, garantindo o pagamento das funcionalidades que realmente irá contribuir no seu
-processo produtivo. Importante ressaltar a questão do custo financeiro envolvido: um projeto de
+ofertados pela Empireo. Quando se trata de um projeto personalizado, o cliente ganha várias
+vantagens competitivas, dentre as quais se destacam a integração total ao processo produtivo
+existente, ou seja, sem alterar o balanceamento da “Curva V” da linha de produção. Ao optar por
+uma solução desenvolvida sob medida, o cliente tem a oportunidade de apresentar à Empireo os
+objetivos, requisitos e funcionalidades desejadas para a máquina, equipamento ou dispositivo.
+Dessa forma, o investimento é direcionado exclusivamente para recursos que efetivamente agregam
+valor ao processo produtivo, evitando custos desnecessários com funcionalidades que não serão
+utilizadas. Importante ressaltar a questão do custo financeiro envolvido: um projeto de
 máquina/equipamento/dispositivo sob demanda pode acarretar em um custo inicial mais elevado em
-comparação à uma máquina disponível no mercado. Isso se deve ao fato da elaboração de um
-projeto executivo direcionado para a necessidade específica do processo produtivo do cliente, e da
-produção e montagem das peças específicas para a máquina/equipamento/dispositivo em
-fabricação. No entanto, vários parâmetros devem ser analisados pelo cliente! Primeiro, existe uma
-máquina pronta no mercado, e que atende prontamente às exigências do processo produtivo? O
-preço da máquina e os custos diretos e indiretos são mais vantajosos em relação à uma máquina
-projetada sob demanda? Outro, consideremos o cenário de que não existe a máquina pretendida no
-Brasil, mas há em outro país, e atende as exigências do processo produtivo! Novamente...o preço da
-máquina, e os custos diretos e indiretos são mais vantajosos em relação à uma máquina projetada
-sob demanda. Além disso, essa máquina importada está adequada à normativa NR-12 (Segurança
-no trabalho em máquinas e equipamentos)?
+comparação a uma máquina disponível no mercado.
+Isso ocorre devido à elaboração de um projeto executivo específico, ao dimensionamento
+personalizado dos componentes e à fabricação de peças e sistemas especialmente projetados para
+atender às necessidades do cliente. No entanto, a análise de viabilidade deve considerar diversos
+fatores além do valor de aquisição. Entre os pontos que precisam ser avaliados, destacam-se: 1-
+Existe no mercado nacional uma máquina capaz de atender plenamente às exigências do processo
+produtivo? 2- O custo de aquisição, operação e manutenção de uma máquina comercial é realmente
+mais vantajoso do que o de uma solução personalizada? 3- Caso o equipamento esteja disponível
+apenas no mercado internacional, os custos de importação, adequação técnica, manutenção e
+reposição de componentes justificam sua aquisição? 4- O equipamento importado atende
+integralmente aos requisitos da NR-12 (Segurança no Trabalho em Máquinas e Equipamentos) e
+demais normas aplicáveis no Brasil?
 Experiências em cenário real da Empireo com parceiros demonstraram que esse custo inicial “se
-paga” através da redução de custos ligados à perda de produtos e insumos na linha de produção, e
-baixo custo de manutenção da máquina/equipamento/dispositivo projetado sob demanda.
+paga” através da redução de custos ligados à perda de produtos e insumos na linha de produção,
+além do baixo custo de manutenção da máquina/equipamento/dispositivo projetado sob demanda.
 Também há situações em que a demanda por parte do cliente tem por objetivo elaborar
-modificações nas máquinas já existentes na linha de produção com o objetivo de “balancear” a linha
-de produção, melhorar o desempenho, eliminar gargalos e reduzir perdas de produto e/ou insumos.
-Dentro dessa condição pode se encaixar o retrofit das máquinas/equipamentos, que a Empireo
-também realiza.
+modificações para modernizar as máquinas já existentes na linha de produção com o objetivo de
+“balancear” a linha de produção, melhorar o desempenho, eliminar gargalos e reduzir perdas de
+produto e/ou insumos. Dentro dessa condição pode se encaixar o retrofit das
+máquinas/equipamentos, realizados de forma personalizada.
 A equipe técnica responsável na área de projetos mecânicos tem mais de 25 anos de
-experiência. É formada por profissionais graduados em engenharia mecânica, e doutores
-na área de engenharia mecânica. Essa experiência e formação acadêmica proporcionam:
-segurança (todas as máquinas/equipamentos/dispositivos da Empireo são produzidos em
-concordância com a normativa NR-12, e outras normativas afins); qualidade; ética; produtividade;
+experiência. É composta por engenheiros mecânicos altamente qualificados, incluindo
 
-redução de perda de produtos e insumos do processo produtivo, e relativo baixo custo dos projetos
-executados.
-Para maiores informações sobre os nossos projetos de máquinas, equipamentos e
-dispositivos favor entrar em contato com o suporte técnico da Empireo.`,
+profissionais com formação em nível de doutorado em engenharia mecânica . Essa
+combinação de experiência prática e sólida formação acadêmica permite à Empireo
+oferecer soluções caracterizadas por: segurança operacional com conformidade coma norma
+técnica NR-12; elevado padrão de qualidade; ética e responsabilidade profissional; maior
+produtividade dos processos; redução de perda de produtos e insumos do processo produtivo;
+confiabilidade operacional; e excelente relação custo-beneficio. Todos os projetos são
+desenvolvidos com foco na segurança, eficiência, qualidade e sustentabilidade econômica,
+buscando sempre proporcionar o melhor retorno sobre o investimento para o cliente.
+Para mais informações sobre os nossos projetos de máquinas, equipamentos e
+dispositivos projetados sob demanda, por favor entrar em contato com o suporte técnico
+da Empireo.`,
       },
       {
         nome: "Redes de GLP e tubulações industriais",
-        descricao: `A Empireo tem experiência na elaboração e execução de projetos de redes de GLP e tubulações
-industriais. Pessoas jurídicas de direito público e privado relevantes, e parceiros da Empireo,
-tiveram as demandas atendidas de forma satisfatória em projetos e execuções de redes de GLP e
-tubulações industriais. A Empireo possui Certidões de Acervo Técnico (CAT) emitidos via CREA-
-GO, atestando a experiência da empresa, e a satisfação dos clientes na realização de serviços de
-redes de GLP e tubulações industriais.
+        descricao: `A Empireo possui ampla experiência na elaboração e execução de projetos de redes de GLP (Gás
+Liquefeito de Petróleo) e tubulações industriais, atendendo com excelência organizações públicas e
+privadas de diversos segmentos. Ao longo de sua trajetória, a empresa tem desenvolvido soluções
+seguras, eficientes e plenamente adequadas às necessidades operacionais de seus clientes. A
+qualidade dos nossos serviços prestados é comprovada pelas Certidões de Acervo Técnico (CAT)
+emitidos via CREA-GO, atestando a experiência da empresa e a satisfação dos clientes na
+realização de serviços de redes de GLP e tubulações industriais.
 Todos os trabalhos são realizados com a capacidade e competência características da Empireo, e
-sempre em concordância com as orientações das normativas vigentes, tais como: ABNT NBR-
+sempre em concordância com as orientações das normas técnicas vigentes, tais como: ABNT NBR-
 15526, NBR-13523, NBR-13103, NBR-15358, além da Norma Técnica do Corpo de Bombeiros
 local.
-Os projetos são executivos e contemplam: projeto base, cálculo de dimensionamento do sistema de
-rede, projeto do abrigo/tanque estacionário, definição do tipo de abastecimento, memorial
-descritivo, apresentação, e planilha orçamentária.
-Para maiores informações sobre os nossos projetos e obras executadas de redes de GLP
-e tubulações industriais favor entrar em contato com o suporte técnico da Empireo.`,
+Os projetos desenvolvidos pela Empireo são de caráter executivo e contemplam todas as etapas
+necessárias para a correta implantação do sistema, incluindo: projeto base, cálculo de
+dimensionamento do sistema de rede, projeto do abrigo/tanque estacionário, definição do sistema e
+da modalidade de abastecimento, memorial descritivo, apresentação, e planilha orçamentária.
+A experiência acumulada pela Empireo, aliada ao compromisso com a excelência técnica e o
+atendimento personalizado, permite o desenvolvimento de soluções seguras, eficientes e
+economicamente viáveis para projetos de redes de GLP e tubulações industriais de diferentes portes
+e complexidades.
+Para mais informações sobre os nossos projetos e obras executadas de redes de GLP e
+tubulações industriais, por favor entrar em contato com o suporte técnico da Empireo.`,
       },
     ],
   },
@@ -188,7 +236,7 @@ e tubulações industriais favor entrar em contato com o suporte técnico da Emp
     itens: [
       {
         nome: "NR-12",
-        descricao: `A inspeção em máquinas e equipamentos segundo as diretrizes da normativa NR-12 é de
+        descricao: `A inspeção em máquinas e equipamentos segundo as diretrizes da norma técnica NR-12 é de
 fundamental importância para garantir a segurança dos trabalhadores, prevenindo acidentes
 de trabalho. Acidentes de trabalho causados pela não conformidade das máquinas e
 equipamentos à NR-12 geram sérios problemas financeiros para as empresas incluindo:
@@ -200,87 +248,135 @@ trabalho.
 A Empireo tem mais de 15 anos de experiência com vistorias em máquinas e equipamentos
 segundo as diretrizes da NR-12. A metodologia utilizada pela Empireo é a realização de
 uma vistoria com emissão de um laudo inicial, indicando pontos em não concordância com a
-NR-12, e orientando sobre os procedimentos a serem feitos para a adequação das máquinas
-e equipamentos sob vistoria. Após a adequação das máquinas e equipamentos, o profissional
-da Empireo realiza uma segunda vistoria para atestar se as máquinas e equipamentos estão
-em concordância com os parâmetros abordados na normativa NR-12. Todo o procedimento
-é feito em perfeita consonância com os órgãos fiscalizadores, dentre eles o CREA através da
+NR-12, e apresentando orientações para as adequações necessárias. Após a implementação
+das correções e melhorias recomendadas, é realizada uma nova vistoria técnica com o
+objetivo de verificar a eficácia das adequações executadas e atestar a conformidade das
+máquinas e equipamentos com os requisitos aplicáveis da NR-12. Todo o procedimento é
+feito em perfeita consonância com os órgãos fiscalizadores, dentre eles o CREA, através da
 emissão da ART (Anotação de Responsabilidade Técnica), que dá validade jurídica aos
 laudos emitidos.
 Para mais informações sobre vistorias em máquinas e equipamentos segundo a
-normativa NR-12 realizadas pela Empireo, favor entrar em contato com o nosso
+normativa NR-12 realizadas pela Empireo por favor entrar em contato com o nosso
 suporte técnico.`,
       },
       {
         nome: "Vasos de pressão e caldeiras",
-        descricao: `A Empireo tem vasta experiência em inspeções e vistorias em vasos de pressão e caldeiras,
-em obediência à normativa ABNT NBR-13, e outras normativas afins. As inspeções e
-vistorias são realizadas nas periodicidades previstas na normativa, e também em
-circunstâncias que eventualmente possuam comprometer a integridade estrutural do vaso de
-pressão e/ou caldeira. A Empireo gera toda a documentação exigida pela normativa, tais
-como: prontuário do equipamento; registro da vistoria/inspeção; relatório da
-vistoria/inspeção; projeto do equipamento e instalação do mesmo; e certificação de
-calibragem dos acessórios de segurança do equipamento.
-Toda a documentação exigida pela normativa NR-13, e outras afins, gerada na vistoria do
-vaso de pressão e/ou caldeira tem validade jurídica via emissão de Anotação de
-Responsabilidade Técnica (ART) junto ao CREA.
-Para conhecer com maior detalhes os nossos serviços de vistoria e inspeção em vasos de
-pressão e caldeiras, favor entrar em contato com o nosso suporte técnico.`,
+        descricao: `A Empireo tem vasta experiência em inspeções, vistorias e avaliações técnicas em vasos de
+pressão e caldeiras, em conformidade com a norma técnica NR-13, e outras normativas
+afins. As inspeções e vistorias são realizadas nas periodicidades previstas na norma técnica,
+e também em circunstâncias que eventualmente possuam comprometer a integridade
+estrutural dos equipamentos. A Empireo gera toda a documentação exigida pela norma
+técnica, tais como: prontuário do equipamento; registro das vistorias e inspeções; relatórios
+técnicos de inspeção e vistorias; projeto do equipamento e de sua instalação; certificação de
+calibragem dos acessórios de segurança do equipamento; demais documentos exigidos pela
+legislação vigente.
+Todos os serviços são executados por profissionais habilitados e acompanhados da emissão
+da ART (Anotação de Responsabilidade Técnica) junto ao CREA, conferindo validade
+jurídica, responsabilidade técnica e respaldo legal aos laudos, relatórios e demais
+documentos emitidos.
+A atuação da Empireo tem como objetivo garantir que vasos de pressão e caldeiras operem
+dentro dos mais elevados padrões de segurança, confiabilidade e conformidade normativa,
+contribuindo para a proteção dos trabalhadores, a continuidade operacional das empresas e a
+redução de riscos de acidentes e passivos legais.
+Para obter mais informações sobre nossos serviços de inspeção e vistoria em vasos de
+pressão e caldeiras, entre em contato com a equipe técnica`,
       },
       {
         nome: "Modernização de elevadores",
-        descricao: `A Empireo realiza trabalho de fiscalização de modernização de elevadores para empresas
-públicas e privadas. A empresa já fiscalizou serviços de modernização de elevadores para
-órgãos públicos importantes, tais como: Tribunal Regional Eleitoral do Estado de Goiás
-(TRE-GO), e Núcleo Estadual do Ministério da Saúde em Goiás.
-A modernização de elevadores através da substituição de sistemas antigos por tecnologias
-modernas, proporciona a redução tanto no consumo de energia elétrica quanto nas falhas
-frequentes do equipamento. Além disso, há outros pontos importantes para serem
-considerados, tais como: menor tempo de espera para os usuários do equipamento, e a
-adequação às normas de acessibilidade vigentes no Brasil.
-Para maiores detalhes do serviço de fiscalização de modernização de elevadores realizado
-pela Empireo, favor entrar em contato com o suporte técnico.`,
+        descricao: `A Empireo Engenharia e Segurança do Trabalho Ltda. atua na fiscalização e no
+acompanhamento técnico de projetos de modernização de elevadores para instituições
+públicas e privadas, garantindo que os serviços sejam executados em conformidade com as
+normas técnicas, requisitos de segurança e especificações contratuais.
+A empresa possui experiência comprovada na fiscalização de importantes projetos de
+modernização de elevadores, incluindo serviços realizados para órgãos públicos de destaque,
+como o Tribunal Regional Eleitoral de Goiás (TRE-GO) e o Núcleo Estadual do Ministério
+da Saúde em Goiás.
+A modernização de elevadores, por meio da substituição de sistemas e componentes
+obsoletos por tecnologias mais modernas e eficientes, proporciona diversos benefícios, entre
+os quais se destacam: redução do consumo de energia elétrica; aumento da confiabilidade
+operacional dos equipamentos; redução da ocorrência de falhas e paradas não programadas;
+diminuição dos custos de manutenção; maior conforto e segurança para os usuários; redução
+do tempo de espera e melhoria do desempenho do sistema de transporte vertical; adequação
+às normas técnicas e aos requisitos de acessibilidade vigentes.
+Durante o processo de modernização, a Empireo realiza o acompanhamento técnico e a
+fiscalização dos serviços executados, verificando a qualidade dos materiais empregados, a
+conformidade das instalações e o atendimento às especificações técnicas definidas para o
+empreendimento.
+A experiência da Empireo na área de engenharia e fiscalização contribui para que os
+projetos de modernização de elevadores sejam conduzidos com segurança, eficiência e
+transparência, proporcionando maior confiabilidade aos contratantes e aos usuários dos
+equipamentos.
+Para obter mais informações sobre os serviços de fiscalização e acompanhamento técnico de
+modernização de elevadores, entre em contato com a equipe técnica da Empireo.`,
       },
       {
         nome: "Rede de GLP",
         descricao: `Inspeções periódicas em redes de GLP são de fundamental importância para
-prevenir riscos de vazamento, explosões e acidentes. A Empireo tem
-clientes/parceiros importantes que demandam inspeções em redes de GLP em
-suas várias instalações, sempre orientada pelas normativas vigentes da ABNT,
-instrução técnica, e norma técnica do Corpo de Bombeiros. A Empireo realiza a
-inspeção na rede de GLP, e emite toda a documentação exigida pelas normativas,
-deixando a sua empresa segura e regularizada com os órgãos fiscalizadores.
+prevenir riscos de vazamento, explosões e acidentes que possam colocar em risco
+pessoas e patrimônios. A Empireo possui experiência na realização de inspeções
+técnicas em redes de GLP para importantes clientes e parceiros dos setores
+público e privado. Todos os serviços são executados em conformidade com as
+normas técnicas vigentes da ABNT, as Instruções Técnicas do Corpo de Bombeiros
+Militar e demais regulamentações aplicáveis. Durante o processo de inspeção, a
+Empireo avalia as condições de segurança, integridade e funcionamento da rede de
+GLP, identificando possíveis não conformidades e emitindo as recomendações
+necessárias para adequação do sistema. A Empireo realiza a inspeção na rede de
+GLP e emite toda a documentação exigida pelas normativas, deixando a sua
+empresa segura e regularizada perante os órgãos fiscalizadores.
 Para mais informações sobre os nossos trabalhos de inspeções em redes de GLP,
-favor entrar em contato com o nosso suporte técnico.`,
+por favor entrar em contato com o nosso suporte técnico.`,
       },
       {
         nome: "Teste de estanqueidade",
-        descricao: `Os testes de estanqueidade tem por objetivo verificar se há vazamentos em tubulações e seus
-acessórios, mangueiras, tanques de armazenamento, dentre outros equipamentos. Há várias
-normativas vigentes que regulam os testes de estanqueidade, variando na abordagem de
-acordo com o fluido, instalações e aplicações.
-A Empireo tem um corpo técnico preparado, e os dispositivos e aparelhos para mensurar,
-verificar e atestar a integridade de objeto de realização do teste de estanqueidade, e para
-todas as abordagens das normativas vigentes.
-Entre em contato com o nosso suporte técnico para conhecer os nossos trabalhos de teste de
-estanqueidade.`,
+        descricao: `Os testes de estanqueidade têm como objetivo verificar a existência de vazamentos em
+tubulações, conexões, válvulas, mangueiras, tanques de armazenamento e demais
+equipamentos que operam com fluidos sob pressão ou em sistemas de transporte e
+armazenamento. A realização periódica desses testes é fundamental para garantir a
+segurança das instalações, prevenir acidentes, evitar perdas de produto e assegurar o correto
+funcionamento dos sistemas. Além disso, os testes de estanqueidade contribuem para a
+conformidade com as normas técnicas e exigências dos órgãos fiscalizadores. Existem
+diversas normas técnicas e regulamentações que estabelecem os critérios para a execução
+dos testes de estanqueidade, cujos procedimentos variam de acordo com o tipo de fluido, as
+características da instalação e a aplicação do sistema. A Empireo tem um corpo técnico
+qualificado, além de dispositivos e aparelhos para mensurar, verificar e atestar a integridade
+dos sistemas submetidos aos testes de estanqueidade. Todos os serviços são executados em
+conformidade com as normas técnicas aplicáveis e com as melhores práticas de engenharia.
+A Empireo realiza ensaios de estanqueidade em diversos tipos de instalações, fornecendo os
+registros e relatórios técnicos necessários para comprovar a conformidade e a segurança dos
+sistemas avaliados.
+Para obter mais informações sobre nossos serviços de teste de estanqueidade, entre em
+contato com a equipe técnica.`,
       },
       {
         nome: "Vida útil e bom funcionamento de máquinas e equipamentos",
-        descricao: `A Empireo possui profissionais experientes na vistoria de máquinas e equipamentos para
-atestar o bom funcionamento e/ou a vida útil das mesmas. Nos laudos técnicos os
-profissionais da Empireo vistoriam a segurança da máquina/equipamento, avaliando o grau
-de risco a que o trabalhador está exposto. Também é realizada manutenção preditiva para
-detectar eventuais anomalias em componentes mecânicos, que podem evoluir para futuras
-falhas. Além disso, é avaliado o desempenho da máquina e/ou equipamento, e é feita uma
-estimativa da sua durabilidade técnica. Após a realização da vistoria, a Empireo elabora
-documentação técnica, que é devidamente anotada no CREA para dar validade jurídica.
-Esse trabalho de vistoria de vida útil e bom funcionamento de máquinas e equipamentos são
-de extrema importância em: processos de compra de máquinas usadas; empresas de locação
-de máquinas e equipamentos; seguradoras; bancos e instituições financiadoras; além de
-perícias para o poder judiciário.
-Entre em contato com o nosso suporte técnico para conhecer com maiores detalhes os
-nossos trabalhos de vistoria de vida útil e bom funcionamento de máquinas e equipamentos.`,
+        descricao: `A Empireo possui profissionais experientes e qualificados na realização de vistorias técnicas
+de máquinas e equipamentos para atestar o bom funcionamento, segurança operacional e a
+vida útil das mesmas. Por meio de inspeções detalhadas, a equipe técnica da Empireo
+verifica o estado geral dos equipamentos, avaliando aspectos relacionados à segurança,
+desempenho, confiabilidade operacional e conformidade com as normas técnicas aplicáveis.
+Também são identificados os riscos aos quais os trabalhadores podem estar expostos durante
+a operação das máquinas e equipamentos, permitindo a adoção de medidas preventivas e
+corretivas quando necessário. Como parte do processo de avaliação, são empregados
+conceitos e técnicas de manutenção preditiva, com o objetivo de identificar desgastes, falhas
+incipientes e anomalias em componentes mecânicos, elétricos e eletromecânicos, evitando
+paradas inesperadas e reduzindo os custos de manutenção. Além da análise das condições
+operacionais, a Empireo realiza estudos técnicos para estimar a vida útil remanescente dos
+equipamentos, considerando fatores como estado de conservação, histórico de utilização,
+condições de operação, desgaste dos componentes e desempenho apresentado durante as
+inspeções. Após a conclusão da vistoria, é elaborado um laudo técnico detalhado, contendo
+as avaliações realizadas, os resultados obtidos, as recomendações técnicas pertinentes e a
+estimativa da vida útil do equipamento, quando aplicável. Toda a documentação emitida é
+acompanhada da ART (Anotação de Responsabilidade Técnica) junto ao CREA, conferindo
+validade jurídica e responsabilidade técnica aos trabalhos executados. Esse trabalho de
+vistoria de vida útil e bom funcionamento de máquinas e equipamentos são de extrema
+importância em: processos de compra de máquinas usadas; empresas de locação de
+máquinas e equipamentos; seguradoras; bancos e instituições financiadoras; além de perícias
+para o poder judiciário.
+A experiência da Empireo permite fornecer informações técnicas confiáveis, contribuindo
+para a tomada de decisões estratégicas, a redução de riscos operacionais e a preservação do
+patrimônio de seus clientes.
+Para obter mais informações sobre nossos serviços de vistoria de vida útil e bom
+funcionamento de máquinas e equipamentos, entre em contato com a equipe técnica.`,
       },
     ],
   },

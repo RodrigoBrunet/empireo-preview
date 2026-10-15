@@ -20,8 +20,9 @@ const cards: Card[] = [
   {
     rotulo: "Nossa missão",
     titulo: "Crescer junto com nossos parceiros",
-    texto:
-      "Entregar trabalhos de excelência com competência, honestidade e integridade. Queremos crescer junto com os nossos parceiros. Somos uma empresa ambiciosa à procura de desafios para serem superados.",
+    texto: `A nossa missão é entregar trabalhos de excelência com competência, honestidade e
+integridade. Buscamos crescer junto com os nossos parceiros. Somos uma empresa
+ambiciosa comprometida com a superação de desafios.`,
     Icone: IconeAlvo,
     estilo: {
       card: "bg-[#002B6B] text-white",
@@ -34,8 +35,10 @@ const cards: Card[] = [
   {
     rotulo: "Nosso foco",
     titulo: "Excelência com ética e compromisso",
-    texto:
-      "Entregar resultados de excelência com ética, competência e integridade. Queremos parceiros através de um trabalho de excelência e compromissado com as suas necessidades.",
+    texto: `O nosso foco é entregar resultados de excelência com ética, competência e integridade.
+Buscamos construir parcerias sólidas e duradouras por meio de um trabalho
+comprometido com as necessidades de nossos clientes, sempre pautado pela qualidade,
+responsabilidade e confiança.`,
     Icone: IconeOlho,
     estilo: {
       card: "bg-linear-to-br from-[#C89B3C] via-[#E9C46A] to-[#C89B3C] text-[#002B6B]",

@@ -37,18 +37,19 @@ export default function Apresentacao() {
             {/* hyphens-auto evita buracos grandes entre palavras no texto justificado (usa o lang="pt-BR") */}
             <div className="mt-6 space-y-4 text-base md:text-lg leading-relaxed text-gray-700 sm:text-justify hyphens-auto">
               <p>
-                A Empireo é uma empresa com uma equipe de profissionais com mais
-                de 25 anos de experiência na área de engenharia mecânica e
-                segurança do trabalho. Reunimos um portfólio vasto e em constante
-                evolução e aperfeiçoamento, capaz de atender cada demanda com as
-                suas especificidades, e entregando os resultados que as pessoas
-                desejam com excelência e qualidade.
+                A Empireo, é uma empresa formada por uma equipe de profissionais
+                com mais de 25 anos de experiência na área de engenharia
+                mecânica e segurança do trabalho. Reunimos um portfólio vasto e
+                em constante evolução e aperfeiçoamento, capaz de atender cada
+                demanda com as suas especificidades, e entregando os resultados
+                com excelência e qualidade.
               </p>
               <p>
                 A Empireo sonha grande! A longo prazo! Sem atalhos e com
-                responsabilidade! Sempre priorizando soluções simples e resultados
-                excepcionais! Temos a ambição de encarar novos desafios e
-                conquistar novas parcerias.
+                responsabilidade! Sempre priorizando soluções simples e
+                resultados excepcionais! Temos a ambição de enfrentar novos
+                desafios, fortalecer parcerias e conquistar novas oportunidades
+                de crescimento.
               </p>
             </div>
           </div>
