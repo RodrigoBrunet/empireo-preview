@@ -19,6 +19,8 @@
 
 # production
 /build
+# pacote do site oficial para a hospedagem (npm run build:site)
+/empireo-site.zip
 
 # misc
 .DS_Store

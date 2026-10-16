@@ -1,5 +1,6 @@
 import Apresentacao from "@/components/Apresentacao";
 import Contato from "@/components/Contato";
+import DadosEstruturados from "@/components/DadosEstruturados";
 import Hero from "@/components/Hero";
 import MissaoVisao from "@/components/MissaoVisao";
 import Parceiros from "@/components/Parceiros";
@@ -9,6 +10,7 @@ import Servicos from "@/components/Servicos";
 export default function Home() {
   return (
     <>
+      <DadosEstruturados />
       <Hero />
       <Apresentacao />
       {/* Seções sem id podem animar inteiras; as que são destino do menu
