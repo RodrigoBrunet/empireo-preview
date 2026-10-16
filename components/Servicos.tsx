@@ -78,7 +78,6 @@ concepção de projetos tendo em vista cenários reais no cotidiano profissional
 O responsável pelo treinamento no software Autodesk Inventor Professional 2026 e
 Inventor Nastran 2026 é licenciado pela Autodesk para a capacitação de profissionais.
 Tem mais de 25 anos de experiência na área de projetos mecânicos. É graduado em
-
 engenharia mecânica, e mestre e doutor na área de engenharia mecânica com foco em:
 tribologia; tratamento superficial; fenômenos de desgaste; fadiga de alto ciclo; plasticidade
 de corpos; fadiga multiaxial e fadiga por fretting em materiais e estruturas.
@@ -190,7 +189,6 @@ produto e/ou insumos. Dentro dessa condição pode se encaixar o retrofit das
 máquinas/equipamentos, realizados de forma personalizada.
 A equipe técnica responsável na área de projetos mecânicos tem mais de 25 anos de
 experiência. É composta por engenheiros mecânicos altamente qualificados, incluindo
-
 profissionais com formação em nível de doutorado em engenharia mecânica . Essa
 combinação de experiência prática e sólida formação acadêmica permite à Empireo
 oferecer soluções caracterizadas por: segurança operacional com conformidade coma norma

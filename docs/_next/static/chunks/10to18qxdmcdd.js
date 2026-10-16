@@ -41,7 +41,6 @@ concep\xe7\xe3o de projetos tendo em vista cen\xe1rios reais no cotidiano profis
 O respons\xe1vel pelo treinamento no software Autodesk Inventor Professional 2026 e
 Inventor Nastran 2026 \xe9 licenciado pela Autodesk para a capacita\xe7\xe3o de profissionais.
 Tem mais de 25 anos de experi\xeancia na \xe1rea de projetos mec\xe2nicos. \xc9 graduado em
-
 engenharia mec\xe2nica, e mestre e doutor na \xe1rea de engenharia mec\xe2nica com foco em:
 tribologia; tratamento superficial; fen\xf4menos de desgaste; fadiga de alto ciclo; plasticidade
 de corpos; fadiga multiaxial e fadiga por fretting em materiais e estruturas.
@@ -128,7 +127,6 @@ produto e/ou insumos. Dentro dessa condi\xe7\xe3o pode se encaixar o retrofit da
 m\xe1quinas/equipamentos, realizados de forma personalizada.
 A equipe t\xe9cnica respons\xe1vel na \xe1rea de projetos mec\xe2nicos tem mais de 25 anos de
 experi\xeancia. \xc9 composta por engenheiros mec\xe2nicos altamente qualificados, incluindo
-
 profissionais com forma\xe7\xe3o em n\xedvel de doutorado em engenharia mec\xe2nica . Essa
 combina\xe7\xe3o de experi\xeancia pr\xe1tica e s\xf3lida forma\xe7\xe3o acad\xeamica permite \xe0 Empireo
 oferecer solu\xe7\xf5es caracterizadas por: seguran\xe7a operacional com conformidade coma norma
