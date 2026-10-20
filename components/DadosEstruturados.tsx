@@ -7,7 +7,6 @@ import { site, urlSite } from "@/lib/site";
 
 // Dados estruturados (Schema.org, JSON-LD): dizem ao Google que tipo de empresa é,
 // onde fica, como contatar e quais serviços oferece (ajuda na busca local).
-// TODO: incluir "email" quando houver o e-mail oficial (o atual é provisório).
 export default function DadosEstruturados() {
   const dados = {
     "@context": "https://schema.org",
@@ -20,6 +19,7 @@ export default function DadosEstruturados() {
     logo: `${urlSite}logo.jpg`,
     image: `${urlSite}logo.jpg`,
     telephone: `+${contato.whatsapp}`,
+    email: contato.email,
     address: {
       "@type": "PostalAddress",
       streetAddress: "Rua 72, nº 223, Qd. C16, Lt. 12/15, Ed. QS Tower, Sala 1507, Jardim Goiás",

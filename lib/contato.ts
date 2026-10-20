@@ -1,10 +1,10 @@
 // Dados de contato da Empireo, usados no Contato e nos cards de detalhe de Serviços.
-// TODO: o e-mail ainda é provisório (telefone/WhatsApp já são os reais).
+// Contatos oficiais da Empireo.
 // whatsapp: só dígitos, com DDI 55 + DDD (formato exigido pelo wa.me)
 export const contato = {
   whatsapp: "5562993230990",
   telefone: "(62) 99323-0990",
-  email: "contato@empireo.com.br",
+  email: "contato@empireoengenharia.com.br",
   // Perfil sem os parâmetros de rastreio do link de compartilhamento (utm_source, exln)
   instagram: "https://www.instagram.com/empireoengenharia7/",
   // Endereço escrito sempre igual (site, Google, cartões): consistência ajuda na busca local
